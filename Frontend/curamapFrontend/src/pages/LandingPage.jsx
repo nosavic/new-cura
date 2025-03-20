@@ -1,7 +1,22 @@
 import React from "react";
 import "../styles/landingpage.css";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+
+
+  const navigate = useNavigate()
+
+  const handleSignUp = () => {
+    navigate('/signup')
+  }
+
+
+  const handleLogin = () => {
+    navigate('/signin')
+  }
+
+
   return (
     <div>
       <div className="Logo">
@@ -21,8 +36,8 @@ const LandingPage = () => {
             to prioritize your wellbeing without the hassle.
           </p>
           <div className="Buttons">
-            <button>Sign Up</button>
-            <button>Login</button>
+            <button onClick={handleSignUp}>Sign Up</button>
+            <button onClick={handleLogin}>Login</button>
           </div>
         </div>
 
