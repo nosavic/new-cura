@@ -1,29 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SignUp = () => {
-  return (
-    <div>
-        
-    <form>
-        <label htmlFor="Birthday">
-            <input type="date" />
-            <input type="month" />
-            <input type="year" />
-        </label>
+  return <div>{/* i helped you to create this component ma guys 😁 */}</div>;
+};
 
-        <label htmlFor="email">
-          <input type="email" />
-        </label>
-        <label htmlFor="password">
-          <input type="password" />
-        </label>
-        <label htmlFor="code">
-            <input type="number" name="" id="" />
-        </label>
-    </form>
-        
-        </div>
-  )
-}
-
-export default SignUp
+export default SignUp;

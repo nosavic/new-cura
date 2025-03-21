@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+"../../styles/welcomepage.css";
 const WelcomeInput = () => {
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -1,5 +1,5 @@
 import React from 'react'
-import WelcomeInput from "../components/WelcomeInput"
+import WelcomeInput from "../components/forms/WelcomeInput"
 import "../styles/welcomepage.css";
 
 const WelcomePage = () => {
