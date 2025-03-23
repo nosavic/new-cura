@@ -1,7 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f0f7ff;
+}
+
+
 .Logo {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+    padding-left: 1.5em;
+    padding-top: 1.5em;
   }
   
   .MainContent {
@@ -39,29 +45,29 @@
     padding: 0.75rem 2rem;
     border-radius: 4px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
   }
   
   .Buttons button:first-child {
-    background-color: #4a9eff;
-    color: white;
+    background-color: transparent;
+    color: #007E85;
     border: none;
   }
   
   .Buttons button:first-child:hover {
-    background-color: #357abd;
+    color: #0f0f0f;
   }
   
   .Buttons button:last-child {
-    background-color: transparent;
-    color: #4a9eff;
+    background-color: #007E85;
+    color: #f0f7ff;
     border: 1px solid #4a9eff;
   }
   
   .Buttons button:last-child:hover {
-    background-color: #f0f7ff;
+    color: #080808;
   }
   
   @media (max-width: 768px) {
