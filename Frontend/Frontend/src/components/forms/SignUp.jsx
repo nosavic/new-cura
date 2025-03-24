@@ -86,7 +86,7 @@ const SignUp = () => {
             />
             <button type="submit">Next</button>
           </form>
-          <p className="">
+          <p className="login-text">
             Already have an account? <a href="">Log in</a>
           </p>
         </section>
