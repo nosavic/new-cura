@@ -84,6 +84,26 @@ input[type="number"] {
   border: 1.5px solid #000;
   border-radius: 4px;
 
+  &::-webkit-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-moz-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &:-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
   &::placeholder {
     color: #000;
     text-align: left;
@@ -96,7 +116,9 @@ select {
   width: 100px;
   height: 3rem;
   border: 1.5px solid #000;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 4px;
 
   > option[value=""] {
@@ -126,6 +148,26 @@ input[type="email"] {
   border: 1.5px solid #000;
   border-radius: 4px;
 
+  &::-webkit-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-moz-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &:-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
   &::placeholder {
     color: #000;
     text-align: left;
@@ -140,6 +182,26 @@ input[type="password"] {
   border: 1.5px solid #000;
   border-radius: 4px;
 
+  &::-webkit-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-moz-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &:-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
   &::placeholder {
     color: #000;
     text-align: left;
@@ -153,6 +215,26 @@ input[id="otp"] {
   height: 3rem;
   border: 1.5px solid #000;
   border-radius: 4px;
+
+  &::-webkit-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-moz-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &:-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
+
+  &::-ms-input-placeholder {
+    color: #000;
+    text-align: left;
+  }
 
   &::placeholder {
     color: #000;
