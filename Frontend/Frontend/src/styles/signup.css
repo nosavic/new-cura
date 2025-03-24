@@ -1,0 +1,50 @@
+/* Sign Up Stylings */
+
+.signup-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/Hero-section.png");
+  background-color: #83c0b9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-container {
+  background-color: #fff;
+  padding-inline: 4rem;
+  padding-block: 3rem;
+  max-width: 484px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  border: none;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.return,
+.cancel {
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
