@@ -1,4 +1,4 @@
- import React from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/landingpage.css";
 
@@ -6,11 +6,11 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
-    navigate('/signup');
+    navigate("/signup");
   };
 
   const handleLogin = () => {
-    navigate('/signin');
+    navigate("/signin");
   };
 
   return (
