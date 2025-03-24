@@ -24,7 +24,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 fieldset {
@@ -47,4 +47,49 @@ fieldset {
 .title {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.dob {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+input[type="number"] {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  width: 100px;
+  height: 3rem;
+
+  &::placeholder {
+    color: #000;
+    text-align: center;
+  }
+}
+
+select {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  width: 100px;
+  height: 3rem;
+
+  > option[value=""] {
+    color: #000;
+    text-align: center;
+  }
+}
+
+.undertext {
+  font-size: 14px;
+  color: #717171;
+  text-align: left;
+}
+
+.email-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

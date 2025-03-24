@@ -23,42 +23,49 @@ const SignUp = () => {
           <form>
             <fieldset>
               <legend>When is your birthday?</legend>
-              <input
-                type="number"
-                id="dayInput"
-                name="day"
-                min="1"
-                max="31"
-                placeholder="DD"
-              />
-              <select id="monthInput" name="month">
-                <option value="" selected disabled>
-                  Month
-                </option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-              <input
-                type="number"
-                id="yearInput"
-                name="year"
-                min="1900"
-                max="2100"
-                placeholder="YYYY"
-              />
-              <p>Your birthday won't be shown publicly.</p>
+              <div className="dob">
+                <input
+                  type="number"
+                  id="dayInput"
+                  name="day"
+                  min="1"
+                  max="31"
+                  placeholder="Day"
+                />
+                <select id="monthInput" name="month">
+                  <option value="" selected disabled>
+                    Month
+                  </option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+                <input
+                  type="number"
+                  id="yearInput"
+                  name="year"
+                  min="1900"
+                  max="2100"
+                  placeholder="Year"
+                />
+              </div>
+              <p className="undertext">
+                Your birthday won't be shown publicly.
+              </p>
             </fieldset>
-            <label htmlFor="email">Email</label>
+            <div className="email-tag">
+              <label htmlFor="email">Email</label>
+              <p>Sign up with Phone</p>
+            </div>
             <input
               type="email"
               id="email"
