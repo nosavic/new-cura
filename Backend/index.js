@@ -7,6 +7,7 @@ require("dotenv").config();
 const app = express();
 // Route Imports
 const pharmacyRoutes = require("./routes/pharmacyRoutes");
+const patientRoutes = require("./routes/patientRoutes");
 
 // Middleware
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/pharmacies", pharmacyRoutes);
+app.use("/api/patients", patientRoutes);
 // Database Connection
 mongoose
   .connect(process.env.DB_URI, { serverSelectionTimeoutMS: 60000 })
