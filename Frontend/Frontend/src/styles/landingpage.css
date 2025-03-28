@@ -1,91 +1,207 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: #f0f7ff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; 
+  background: #f0f7ff;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+
+div {
+  flex: 1; 
 }
 
 
 .Logo {
-    padding-left: 2.8em;
-    padding-top: 1.5em;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.Logo img {
+  max-width: 100%; 
+  height: auto;
+  width: 150px; 
+}
+
+
+.MainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  height: 100vh;
+  gap: 2rem;
+  flex: 1; 
+}
+
+
+.TextContent {
+  max-width: 600px;
+}
+
+.TextContent h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.TextContent p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+
+.Buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.Buttons button {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Buttons button:first-child {
+  background-color: transparent;
+  color: #007E85;
+  border: none;
+}
+
+.Buttons button:first-child:hover {
+  color: #0f0f0f;
+}
+
+.Buttons button:last-child {
+  background-color: #007E85;
+  color: #f0f7ff;
+  border: 1px solid #4a9eff;
+}
+
+.Buttons button:last-child:hover {
+  color: #080808;
+}
+
+.MainContent img {
+  max-width: 100%; 
+  height: auto;
+  width: 100%; 
+  max-width: 500px; 
+}
+
+/* Responsive Design */
+
+/* Small Mobile Devices (up to 576px) */
+@media (max-width: 576px) {
+  .Logo {
+    padding-left: 1rem;
+    padding-top: 1rem;
   }
-  
+
+  .Logo img {
+    width: 120px;
+  }
+
   .MainContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .TextContent {
+    max-width: 100%; 
+  }
+
+  .TextContent h1 {
+    font-size: 1.8rem; 
+  }
+
+  .TextContent p {
+    font-size: 0.9rem; 
+  }
+
+  .Buttons {
+    flex-direction: column; 
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .Buttons button {
+    padding: 0.75rem 1.5rem; 
+    font-size: 0.9rem;
+    width: 100%; 
+    max-width: 200px; 
+    margin: 0 auto;
+  }
+
+  .MainContent img {
+    max-width: 300px; 
+  }
+}
+
+/* Tablets (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .Logo {
+    padding-left: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .MainContent {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
     gap: 2rem;
   }
-  
-  .TextContent {
-    max-width: 600px;
-  }
-  
+
   .TextContent h1 {
-    font-size: 3rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-size: 2.2rem;
   }
-  
+
   .TextContent p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-  
-  .Buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .Buttons button {
-    padding: 0.75rem 2rem;
-    border-radius: 4px;
     font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s;
   }
-  
-  .Buttons button:first-child {
-    background-color: transparent;
-    color: #007E85;
-    border: none;
+
+  .Buttons {
+    justify-content: center;
+    flex-direction: row; 
   }
-  
-  .Buttons button:first-child:hover {
-    color: #0f0f0f;
+
+  .MainContent img {
+    max-width: 400px;
   }
-  
-  .Buttons button:last-child {
-    background-color: #007E85;
-    color: #f0f7ff;
-    border: 1px solid #4a9eff;
+}
+
+/* Larger Desktops (1024px and above) */
+@media (min-width: 1024px) {
+  .MainContent {
+    padding: 4rem 6rem; 
+    max-width: 1400px; 
+    margin: 0 auto; 
   }
-  
-  .Buttons button:last-child:hover {
-    color: #080808;
+
+  .TextContent h1 {
+    font-size: 3.5rem; 
   }
-  
-  @media (max-width: 768px) {
-    .MainContent {
-      flex-direction: column;
-      padding: 2rem;
-      text-align: center;
-    }
-  
-    .TextContent h1 {
-      font-size: 2rem;
-    }
-  
-    .TextContent p {
-      font-size: 1rem;
-    }
-  
-    .Buttons {
-      justify-content: center;
-    }
+
+  .TextContent p {
+    font-size: 1.3rem;
   }
+
+  .Buttons button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
