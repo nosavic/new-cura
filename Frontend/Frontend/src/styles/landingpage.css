@@ -5,39 +5,38 @@
 }
 
 body {
-  font-family: Arial, sans-serif; 
+  font-family: Arial, sans-serif;
   background: #f0f7ff;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 div {
-  flex: 1; 
+  flex: 1;
 }
 
 .Logo {
+  display: flex;
   padding-left: 1.5rem;
   padding-top: 1.5rem;
 }
 
-.Logo img {
-  max-width: 100%; 
-  height: auto;
-  width: 150px; 
+.Logo img:nth-child(1) {
+  max-width: 100%;
+  height: 80px;
+  width: 80px;
 }
-
 
 .MainContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem;
+  padding-left: 4rem;
   height: 100vh;
   gap: 2rem;
-  flex: 1; 
+  flex: 1;
 }
-
 
 .TextContent {
   max-width: 600px;
@@ -57,7 +56,6 @@ div {
   line-height: 1.6;
 }
 
-
 .Buttons {
   display: flex;
   gap: 1rem;
@@ -74,7 +72,7 @@ div {
 
 .Buttons button:first-child {
   background-color: transparent;
-  color: #007E85;
+  color: #007e85;
   border: none;
 }
 
@@ -83,7 +81,7 @@ div {
 }
 
 .Buttons button:last-child {
-  background-color: #007E85;
+  background-color: #007e85;
   color: #f0f7ff;
   border: 1px solid #4a9eff;
 }
@@ -93,10 +91,49 @@ div {
 }
 
 .MainContent img {
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
-  width: 100%; 
-  max-width: 500px; 
+  width: 100%;
+  max-width: 500px;
+}
+
+.second-level-content {
+  padding: 3em;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7em;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-level-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.second-level-content-p {
+  font-size: 1.5em;
+}
+
+.Benefits {
+  display: flex;
+  justify-content: center;
+}
+
+.Benefits div {
+  display: flex;
+  gap: 1em;
+}
+
+.Benefits span {
+  display: flex;
+  flex-direction: column;
+}
+
+.Benefits div img {
+  width: 25px;
+  height: 25px;
 }
 
 /* Responsive Design */
@@ -120,33 +157,33 @@ div {
   }
 
   .TextContent {
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   .TextContent h1 {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
 
   .TextContent p {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 
   .Buttons {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 0.75rem;
     justify-content: center;
   }
 
   .Buttons button {
-    padding: 0.75rem 1.5rem; 
+    padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
-    width: 100%; 
-    max-width: 200px; 
+    width: 100%;
+    max-width: 200px;
     margin: 0 auto;
   }
 
   .MainContent img {
-    max-width: 300px; 
+    max-width: 300px;
   }
 }
 
@@ -174,7 +211,7 @@ div {
 
   .Buttons {
     justify-content: center;
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   .MainContent img {
@@ -185,13 +222,13 @@ div {
 /* Larger Desktops (1024px and above) */
 @media (min-width: 1024px) {
   .MainContent {
-    padding: 4rem 6rem; 
-    max-width: 1400px; 
-    margin: 0 auto; 
+    padding: 4rem 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
   .TextContent h1 {
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
   }
 
   .TextContent p {
