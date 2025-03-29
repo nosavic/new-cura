@@ -14,7 +14,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div>
+    <div className="landing-page-container">
       <div className="Logo">
         <img src="./src/assets/LogoSymbol.svg" alt="logo symbol" />
         <img src="./src/assets/TextLogo.svg" alt="curamap logo" />
@@ -93,11 +93,11 @@ const LandingPage = () => {
 
         <p>
           order Easily, find Genuine Drug Instantly,Pay securely and Pick up
-          With Confidence-experience ,Fast safe and Reliable Access to Medication With Curamap
+          With Confidence-experience ,Fast safe and Reliable Access to
+          Medication With Curamap
         </p>
 
         <button>Browse Medications</button>
-        
       </div>
     </div>
   );
