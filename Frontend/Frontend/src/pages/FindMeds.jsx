@@ -107,7 +107,7 @@ const FindMeds = () => {
             <h2>Emzor Paracetamol Tablets</h2>
             <p>
               Emzor paracetamol tablet is used to relieve mild to mild to
-              moderate pain from a headache, toothache,cold,flu, joint pain or
+              moderate pain from a headache, toothache, cold, flu, joint pain or
               period pain.
             </p>
             <div className="med-details">
