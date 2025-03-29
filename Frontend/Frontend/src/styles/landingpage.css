@@ -12,7 +12,11 @@ body {
   flex-direction: column;
 }
 
-div {
+/* div {
+  flex: 1;
+} */
+
+.landing-page-container {
   flex: 1;
 }
 
