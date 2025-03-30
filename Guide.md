@@ -1,4 +1,4 @@
-# Simple Guide on Branching
+# Simple Guide on how to Fork, Clone, Fetch Upstream, Update Local Branches, and Open a Pull Request
 
 Follow the steps below to have the latest changes on your local machine
 1. **Fork** the Curamap Repository
@@ -24,7 +24,7 @@ e.g. `git clone https://github.com/bahseet-altschool/curamapCodes`
      git remote -v
 ##### Fetch the Upstream
      git fetch upstream
-##### Update local braches using rebase
+##### Update local branches using rebase
      git checkout main
      git rebase upstream/development
 ## *Your local is successfully updated*, and you can create the branch you want, write your codes, and all other things you want
@@ -43,7 +43,9 @@ e.g. `git push origin dev`
 Go to your github account
 1. A notification will appear, click on **Compare & pull request**
 ![14 compare and pull request](https://github.com/user-attachments/assets/13031b95-3ec3-40c1-b2f1-9f126957b699)
-2. Change the base branch to **development**, and the compare branch to the branch you worked with
+2. Change the **base** branch to **development**, and the **compare** branch to the branch you worked with
 ![15i creating a pull request](https://github.com/user-attachments/assets/29753c4c-0dd7-4d44-a359-ba4bf2dd5ec4)
-3. 
+3. Click on **Create pull request**
+![15ii](https://github.com/user-attachments/assets/744b3e67-385c-4afb-aa6c-cc5d0c75fc99)
 
+## You've successfully created a pull request
