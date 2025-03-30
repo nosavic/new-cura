@@ -81,7 +81,7 @@ const SignUp = () => {
             <button type="submit">Next</button>
           </form>
           <p className="login-text">
-            Already have an account? <a href="">Log in</a>
+            Already have an account? <a href="/signin">Log in</a>
           </p>
         </section>
       </section>
