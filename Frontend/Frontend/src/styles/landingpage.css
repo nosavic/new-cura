@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +6,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #f0f7ff;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
-
-/* div {
-  flex: 1;
-} */
 
 .landing-page-container {
   flex: 1;
@@ -22,23 +17,25 @@ body {
 
 .Logo {
   display: flex;
+  align-items: center;
+  justify-items: center;
   padding-left: 1.5rem;
   padding-top: 1.5rem;
 }
 
 .Logo img:nth-child(1) {
   max-width: 100%;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
 }
 
 .MainContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 4rem;
   height: 100vh;
-  gap: 2rem;
+  gap: 12rem;
   flex: 1;
 }
 
@@ -66,7 +63,7 @@ body {
 }
 
 .Buttons button {
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: bold;
@@ -94,21 +91,33 @@ body {
   color: #080808;
 }
 
+.MainContent img:nth-child(2) {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+
+  max-width: 300px;
+}
+
 .MainContent img {
   max-width: 100%;
+  width: 90rem;
   height: auto;
   width: 100%;
   max-width: 500px;
 }
+
+/* second level content of Landing Page*/
 
 .second-level-content {
   padding: 3em;
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  gap: 7em;
-  justify-content: center;
-  align-items: center;
+  gap: 10em;
+  justify-content: flex-start;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
 }
 
 .second-level-content h2 {
@@ -116,13 +125,9 @@ body {
   color: #333;
 }
 
-.second-level-content-p {
-  font-size: 1.5em;
-}
-
 .Benefits {
   display: flex;
-  justify-content: center;
+  gap: 2.7em;
 }
 
 .Benefits div {
@@ -135,11 +140,79 @@ body {
   flex-direction: column;
 }
 
+.Benefits span p {
+  font-size: 1em;
+}
+
+.first-benefits {
+  flex: 2;
+}
+
+.second-benefits {
+  flex: 1;
+}
+.third-benefits {
+  flex: 1;
+}
+.second-level-content-p {
+  font-size: 1em;
+  flex: 2;
+  width: 100%;
+  text-wrap: nowrap;
+}
 .Benefits div img {
   width: 25px;
   height: 25px;
 }
 
+/* Third level content of Landing Page*/
+
+.third-level-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 12em;
+  width: 100%;
+  max-width: 90rem;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
+}
+
+.third-level-content-text {
+  display: flex;
+  width: 50em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 16px;
+  gap: 5em;
+  padding-left: 2em;
+}
+
+.third-level-content-text h2 {
+  font-size: 2.1rem;
+  color: #333;
+}
+
+.third-level-content-text button {
+  width: 9rem;
+  height: 4.5rem;
+  padding: 0.5em;
+  background: #007e85;
+  color: #f0f7ff;
+  border: none;
+  border-radius: 0.3em;
+}
+
+/* Fourth level content of Landing Page*/
+
+
+.card {
+  max-width: 100px;
+  padding: 10rem;
+font-size: 14px;
+border: 1px solid #333;
+
+}
 /* Responsive Design */
 
 /* Small Mobile Devices (up to 576px) */
