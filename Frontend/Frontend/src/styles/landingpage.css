@@ -135,11 +135,14 @@ body {
   gap: 1em;
 }
 
-.Benefits span {
+.benefit-text-container {
   display: flex;
   flex-direction: column;
 }
 
+.benefit-text-container p{
+  text-wrap: wrap;
+}
 .Benefits span p {
   font-size: 1em;
 }
@@ -188,6 +191,9 @@ body {
   padding-left: 2em;
 }
 
+.third-level-content-text p{
+  text-wrap: wrap;
+}
 .third-level-content-text h2 {
   font-size: 2.1rem;
   color: #333;
@@ -204,14 +210,34 @@ body {
 }
 
 /* Fourth level content of Landing Page*/
-
-
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
 .card {
-  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 20rem;
+  border-radius: 1em;
   padding: 10rem;
-font-size: 14px;
-border: 1px solid #333;
+  font-size: 14px;
+  border: 1px solid #333;
+}
 
+.card-text-section {
+  margin-top: 5rem;
+}
+.name-pre h4,
+p {
+  text-wrap: nowrap;
+}
+.Drug-price p {
+  text-wrap: nowrap;
 }
 /* Responsive Design */
 
