@@ -12,7 +12,9 @@ body {
 }
 
 .landing-page-container {
-  flex: 1;
+ display: flex;
+ flex-direction: column;
+ gap: 7rem;
 }
 
 .Logo {
@@ -31,15 +33,17 @@ body {
 
 .MainContent {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  padding-left: 4rem;
-  height: 100vh;
-  gap: 12rem;
-  flex: 1;
+  justify-content: center;
+  height: 100%;
+  gap: 10rem;
+
 }
 
 .TextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   max-width: 600px;
 }
 
@@ -91,21 +95,18 @@ body {
   color: #080808;
 }
 
-.MainContent img:nth-child(2) {
+.MainContent img:nth-child(1) {
   max-width: 100%;
   height: auto;
-  width: 100%;
-
-  max-width: 300px;
-}
-
-.MainContent img {
+  width: 200px;
   max-width: 100%;
-  width: 90rem;
-  height: auto;
-  width: 100%;
-  max-width: 500px;
 }
+.MainContent img:nth-child(2){
+ max-width: 100%;
+ width: 550px;
+ height: auto;
+}
+
 
 /* second level content of Landing Page*/
 
@@ -138,6 +139,11 @@ body {
 .benefit-text-container {
   display: flex;
   flex-direction: column;
+}
+
+.second-level-content-p{
+
+  font-size: 18px;
 }
 
 .benefit-text-container p{

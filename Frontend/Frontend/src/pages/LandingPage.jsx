@@ -30,6 +30,7 @@ const LandingPage = () => {
           <img src="./src/assets/scribbling.svg" alt="scribbling" />
           <p>
             We are here to make Healthcare simple and accessible,empowering you
+            <br />
             to prioritize your wellbeing without the hassle.
           </p>
           <div className="Buttons">
@@ -38,9 +39,9 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div>
+    
           <img src="./src/assets/BannerPicture.svg" alt="Banner picture" />
-        </div>
+
       </div>
       <div className="second-level-content">
         <h2>Connecting Patients to Pharmacies For Easy Medication Access.</h2>
@@ -48,7 +49,7 @@ const LandingPage = () => {
           {" "}
           Curamap Connects Patients With Nearby Pharmacies In Nigeria Enabling
           Them To order Genuine And Affordable Medications
-    <br />
+          <br />
           With Ease.Our PlatForm secures access to quality Drugs. with
           convenient payment option and easy pharmacy pickup.
         </p>
@@ -118,7 +119,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="card card-2">
-          <img src="./src/assets/card-2-img.svg" alt="Tablets image" />
+            <img src="./src/assets/card-2-img.svg" alt="Tablets image" />
             <div className="card-text-section">
               <span className="name-pre">
                 <h4>Hello Adeola</h4>
@@ -126,11 +127,10 @@ const LandingPage = () => {
               </span>
               <span className="Drug-price">
                 <h4>Contact Channels</h4>
-              <img src="" alt="" />
-              <img src="" alt="" />
+                <img src="" alt="" />
+                <img src="" alt="" />
               </span>
             </div>
-
           </div>
           <div className="card card-3"></div>
         </div>
