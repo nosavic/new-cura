@@ -64,8 +64,8 @@ const FindMeds = () => {
 
         <div className="med-container">
           <div className="med-one">
-            <h2>Ibuprofen</h2>
-            <p>
+            <h2 className="med-title">Ibuprofen</h2>
+            <p className="med-description">
               Ibuprofen Tablet Is Used To Relieve Mild To Moderate Pain From A
               Headache, Toothache, Cold, Flu, Joint Pain, Or Periods Pain.
             </p>
@@ -104,8 +104,8 @@ const FindMeds = () => {
             <p style={{ textAlign: "end" }}>Same day pick up</p>
           </div>
           <div className="med-two">
-            <h2>Emzor Paracetamol Tablets</h2>
-            <p>
+            <h2 className="med-title">Emzor Paracetamol Tablets</h2>
+            <p className="med-description">
               Emzor paracetamol tablet is used to relieve mild to mild to
               moderate pain from a headache, toothache, cold, flu, joint pain or
               period pain.
@@ -144,8 +144,8 @@ const FindMeds = () => {
             </div>
           </div>
           <div className="med-three">
-            <h2>Atorvastatin</h2>
-            <p>
+            <h2 className="med-title">Atorvastatin</h2>
+            <p className="med-description">
               Atorvastatin is a statin medication that lowers cholesterol by
               inhibiting its production in the liver. It helps reduce the risk
               of heart disease and stroke.
