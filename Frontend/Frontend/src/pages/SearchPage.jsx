@@ -1,0 +1,173 @@
+// src/components/SearchPage.jsx
+import { useState, useEffect } from "react";
+import { medicines } from "../script/medicine";
+import MedicineCard from "../components/MedicineCard";
+import "../styles/searchpage.css";
+import brandlogo from "../assets/brandlogo.svg";
+import avatar from "../assets/avatar.svg";
+
+const SearchPage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [selectedMedicines, setSelectedMedicines] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  useEffect(() => {
+    if (searchTerm.trim() === "") {
+      setSuggestions([]);
+      return;
+    }
+
+    const filtered = medicines.filter((medicine) =>
+      medicine.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSuggestions(filtered);
+  }, [searchTerm]);
+
+  const handleSelectMedicine = (medicine) => {
+    // Check if medicine is already selected
+    const isAlreadySelected = selectedMedicines.some(
+      (item) => item.id === medicine.id
+    );
+
+    if (!isAlreadySelected) {
+      setSelectedMedicines((prev) => [
+        ...prev,
+        {
+          ...medicine,
+          selectedDosage: medicine.dosages[0],
+          selectedPackageSize: medicine.packageSizes[0],
+          quantity: 1,
+        },
+      ]);
+    }
+
+    setSearchTerm("");
+    setSuggestions([]);
+  };
+
+  const handleRemoveMedicine = (id) => {
+    setSelectedMedicines((prev) =>
+      prev.filter((medicine) => medicine.id !== id)
+    );
+  };
+
+  const handleDosageChange = (id, dosage) => {
+    setSelectedMedicines((prev) =>
+      prev.map((medicine) =>
+        medicine.id === id ? { ...medicine, selectedDosage: dosage } : medicine
+      )
+    );
+  };
+
+  const handlePackageSizeChange = (id, size) => {
+    setSelectedMedicines((prev) =>
+      prev.map((medicine) =>
+        medicine.id === id
+          ? { ...medicine, selectedPackageSize: size }
+          : medicine
+      )
+    );
+  };
+
+  const handleQuantityChange = (id, quantity) => {
+    const qty = Math.max(1, parseInt(quantity) || 1);
+    setSelectedMedicines((prev) =>
+      prev.map((medicine) =>
+        medicine.id === id ? { ...medicine, quantity: qty } : medicine
+      )
+    );
+  };
+
+  const handleSubmit = () => {
+    if (selectedMedicines.length === 0) {
+      alert("Please select at least one medicine");
+      return;
+    }
+
+    // Prepare the data for submission
+    const submissionData = selectedMedicines.map((medicine) => ({
+      id: medicine.id,
+      name: medicine.name,
+      dosage: medicine.selectedDosage,
+      packageSize: medicine.selectedPackageSize,
+      quantity: medicine.quantity,
+    }));
+
+    // send this to an API
+    console.log("Submitting medicine data:", submissionData);
+    alert(`Submitted ${selectedMedicines.length} medicine(s)`);
+
+    // Here you could also clear the selection if needed
+    // setSelectedMedicines([]);
+  };
+  const handleManualSearch = () => {
+    if (searchTerm.trim() === "") {
+      setSuggestions([]);
+      return;
+    }
+  };
+
+  return (
+    <div className="search-page">
+      <div className="search-header">
+        <img className="brandlogo" src={brandlogo} alt="brandlogo" />
+        <img className="avatar" src={avatar} alt="avatar" />
+      </div>
+      <div className="search-container">
+        <div className="search-input-group">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onFocus={() => setShowSuggestions(true)}
+            onKeyDown={(e) => e.key === "Enter" && handleManualSearch()}
+            placeholder="Search for medicine..."
+            className="search-input"
+          />
+          <button className="search-input-btn" onClick={handleManualSearch}>
+            +
+          </button>
+        </div>
+        {showSuggestions && suggestions.length > 0 && (
+          <ul className="suggestions-list">
+            {suggestions.map((medicine) => (
+              <li
+                key={medicine.id}
+                onClick={() => handleSelectMedicine(medicine)}
+                className="suggestion-item"
+              >
+                {medicine.name} - {medicine.description}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div className="selected-medicines">
+        {selectedMedicines.map((medicine) => (
+          <MedicineCard
+            key={medicine.id}
+            medicine={medicine}
+            onRemove={handleRemoveMedicine}
+            onDosageChange={handleDosageChange}
+            onPackageSizeChange={handlePackageSizeChange}
+            onQuantityChange={handleQuantityChange}
+          />
+        ))}
+      </div>
+
+      <footer className="submit-section">
+        <button
+          onClick={handleSubmit}
+          className="submit-btn"
+          disabled={selectedMedicines.length === 0}
+        >
+          Find Med
+        </button>
+      </footer>
+    </div>
+  );
+};
+
+export default SearchPage;
