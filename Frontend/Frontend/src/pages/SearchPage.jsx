@@ -1,16 +1,18 @@
 // src/components/SearchPage.jsx
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { medicines } from "../script/medicine";
 import MedicineCard from "../components/MedicineCard";
+import SearchpageSummary from "./SearchpageSummary";
 import "../styles/searchpage.css";
 import brandlogo from "../assets/brandlogo.svg";
 import avatar from "../assets/avatar.svg";
 
-const SearchPage = () => {
+const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [selectedMedicines, setSelectedMedicines] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (searchTerm.trim() === "") {
@@ -92,15 +94,21 @@ const SearchPage = () => {
       dosage: medicine.selectedDosage,
       packageSize: medicine.selectedPackageSize,
       quantity: medicine.quantity,
+      prescription: medicine.prescription || false,
     }));
 
-    // send this to an API
+    // Log the data (optional)
     console.log("Submitting medicine data:", submissionData);
-    alert(`Submitted ${selectedMedicines.length} medicine(s)`);
 
-    // Here you could also clear the selection if needed
-    // setSelectedMedicines([]);
+    // Navigate to the SearchpageSummary with the selected medicines and medicine count as state
+    navigate("/search-summary", {
+      state: {
+        selectedMedicines: submissionData,
+        medicineCount: selectedMedicines.length,
+      },
+    });
   };
+
   const handleManualSearch = () => {
     if (searchTerm.trim() === "") {
       setSuggestions([]);
