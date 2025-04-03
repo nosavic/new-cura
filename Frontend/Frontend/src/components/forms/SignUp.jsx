@@ -8,14 +8,8 @@ const SignUp = () => {
         <section className="signup-container">
           <div className="action-btn">
             <div className="return">
-              <a href="#">
+              <a href="/">
                 <img src="/src/assets/CaretLeft.png" alt="" />
-              </a>
-            </div>
-
-            <div className="cancel">
-              <a href="#">
-                <img src="/src/assets/X.png" alt="" />
               </a>
             </div>
           </div>
@@ -87,7 +81,7 @@ const SignUp = () => {
             <button type="submit">Next</button>
           </form>
           <p className="login-text">
-            Already have an account? <a href="">Log in</a>
+            Already have an account? <a href="/signin">Log in</a>
           </p>
         </section>
       </section>
