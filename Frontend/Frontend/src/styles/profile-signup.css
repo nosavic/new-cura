@@ -1,0 +1,11 @@
+.stark {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 2rem;
+  background-color: steelblue;
+}
+
+.arya {
+  color: white;
+}
