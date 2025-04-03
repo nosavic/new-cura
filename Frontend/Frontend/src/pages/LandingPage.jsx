@@ -39,9 +39,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-    
-          <img src="./src/assets/BannerPicture.svg" alt="Banner picture" />
-
+        <img src="./src/assets/BannerPicture.svg" alt="Banner picture" />
       </div>
       <div className="second-level-content">
         <h2>Connecting Patients to Pharmacies For Easy Medication Access.</h2>
@@ -104,7 +102,10 @@ const LandingPage = () => {
         <h3>How is curamap Different ?</h3>
         <div className="card-container">
           <div className="card card-1">
-            <img src="./src/assets/card-1-img.svg" alt="Tablets image" />
+            <div className="card-1-img-container">
+              <img src="./src/assets/card-1-img.svg" alt="Tablets image" />
+            </div>
+
             <div className="card-text-section">
               <span className="name-pre">
                 <h4>Tab Valsatan 2.5mg</h4>
@@ -119,7 +120,10 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="card card-2">
-            <img src="./src/assets/card-2-img.svg" alt="Tablets image" />
+            <div className="card-2-img-container">
+              <img src="./src/assets/card-2-img.svg" alt="Tablets image" />
+            </div>
+
             <div className="card-text-section">
               <span className="name-pre">
                 <h4>Hello Adeola</h4>
@@ -127,12 +131,93 @@ const LandingPage = () => {
               </span>
               <span className="Drug-price">
                 <h4>Contact Channels</h4>
-                <img src="" alt="" />
-                <img src="" alt="" />
+                <img src="./src/assets/contactchannels.svg" alt="" />
               </span>
             </div>
           </div>
-          <div className="card card-3"></div>
+          <div className="card card-3">
+            {" "}
+            <div className="card-3-img-container">
+              <img src="./src/assets/card-3-img.svg" alt="Tablets image" />
+            </div>
+          </div>
+        </div>
+
+        <div className="services-and-offers">
+          <span>
+            <h2>Affordable Prices</h2>
+            <p>
+              Our Goal is to Ensure you Receive Exceptional value on your
+              medication and Healthcare Solutions With our Low Prices And
+              Discount
+            </p>
+          </span>
+          <span>
+            <h2>Medication Support</h2>
+            <p>
+              We Esure you Stay Healthy and on schedule with automated Reliefs,
+              Supportive Care and Proactive Patient Follow-up and Advice
+            </p>
+          </span>
+          <span>
+            <h2>Priority Pick-up</h2>
+            <p>
+              Skip The Wait! our Same Day Pick-up Service Ensures, You Get your
+              Medications and Helathcare Solutions Quickly and Easily
+            </p>
+          </span>
+        </div>
+      </div>
+
+      <div className="fifth-level-content">
+        <h2>What Our Clients Say</h2>
+        <div className="fifth-card-container">
+          <div className="testimonial-card card-4">
+            <div className="profile">
+              <div className="image-container">
+                <img src="./src/assets/clientpic1.svg" alt="" />
+              </div>
+              <h3>Wale</h3>
+            </div>
+            <p>
+              curamaphas completely Transformed how i managemy prescription.As
+              someone With a Hectic Schedule, The One-click Delivery Option is a
+              Game-Changer.My Meds Arrive Quickly
+            </p>
+          </div>
+
+          <div className="testimonial-card card-5">
+            <div className="profile">
+              <div className="image-container">
+                <img src="./src/assets/clientpic2.svg" alt="" />
+              </div>
+              <h3>Vivian</h3>
+            </div>
+
+            <p>
+              i Love How Curamap Makes Health care so easy. i no longer have to
+              worry about long Pharmacy Ques or missing doses. The convenience
+              of irdering online and the speed of delivery are unmatched,
+              curamap has truly simplified my life.
+            </p>
+          </div>
+
+          <div className="testimonial-card card-6">
+            <div className="profile">
+              <div className="image-container">
+                <img src="./src/assets/clientpic3.svg" alt="" />
+              </div>
+
+              <h3>Matt</h3>
+            </div>
+
+            <p>
+              i was skeptical about online pharmacy at first, But Curamap
+              exceeded my expectation , The interface is user-Friendly , the
+              price are great , and the delivery is super fast, its like having
+              a Personal Pharmacy at your Fingertips
+            </p>
+          </div>
         </div>
       </div>
     </div>

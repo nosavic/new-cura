@@ -12,9 +12,9 @@ body {
 }
 
 .landing-page-container {
- display: flex;
- flex-direction: column;
- gap: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 }
 
 .Logo {
@@ -37,7 +37,6 @@ body {
   justify-content: center;
   height: 100%;
   gap: 10rem;
-
 }
 
 .TextContent {
@@ -98,15 +97,14 @@ body {
 .MainContent img:nth-child(1) {
   max-width: 100%;
   height: auto;
-  width: 200px;
+  width: 100px;
   max-width: 100%;
 }
-.MainContent img:nth-child(2){
- max-width: 100%;
- width: 550px;
- height: auto;
+.MainContent img:nth-child(2) {
+  max-width: 100%;
+  width: 550px;
+  height: auto;
 }
-
 
 /* second level content of Landing Page*/
 
@@ -141,12 +139,11 @@ body {
   flex-direction: column;
 }
 
-.second-level-content-p{
-
+.second-level-content-p {
   font-size: 18px;
 }
 
-.benefit-text-container p{
+.benefit-text-container p {
   text-wrap: wrap;
 }
 .Benefits span p {
@@ -179,10 +176,10 @@ body {
 .third-level-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 12em;
   width: 100%;
   max-width: 90rem;
-  border-top: 1px solid #080808;
   border-bottom: 1px solid #080808;
 }
 
@@ -197,7 +194,7 @@ body {
   padding-left: 2em;
 }
 
-.third-level-content-text p{
+.third-level-content-text p {
   text-wrap: wrap;
 }
 .third-level-content-text h2 {
@@ -216,6 +213,16 @@ body {
 }
 
 /* Fourth level content of Landing Page*/
+
+.fourth-level-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 4rem;
+  flex-direction: column;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -223,6 +230,7 @@ body {
   gap: 2em;
 }
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,10 +239,18 @@ body {
   height: 20rem;
   border-radius: 1em;
   padding: 10rem;
+  max-width: 500px;
   font-size: 14px;
   border: 1px solid #333;
 }
 
+.card-3-img-container {
+  position: absolute;
+  border-radius: 3em;
+  bottom: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
 .card-text-section {
   margin-top: 5rem;
 }
@@ -245,6 +261,88 @@ p {
 .Drug-price p {
   text-wrap: nowrap;
 }
+
+.services-and-offers {
+  display: flex;
+  gap: 12rem;
+  padding: 2rem;
+}
+
+.services-and-offers span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+}
+
+.services-and-offers span h2 {
+  font-size: 15px;
+}
+
+.services-and-offers span p {
+  font-size: 14px;
+  text-wrap: wrap;
+}
+
+/* fifth level content of Landing Page*/
+
+.fifth-level-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fifth-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.testimonial-card {
+  background: #d4e9e7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 20rem;
+  border-radius: 1em;
+  padding: 10rem;
+  max-width: 500px;
+  font-size: 14px;
+
+  
+  overflow: hidden;
+}
+
+.testimonial-card p {
+  width: 300px;
+  height: 300px;
+}
+.profile {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  margin-left: -7em;
+  gap: 2em;
+}
+
+.card-5 {
+  width: 26rem;
+  height: 26rem;
+}
+
+.image-container {
+  width: 150px;
+}
+.testimonial-card p {
+  text-wrap: wrap;
+}
+
 /* Responsive Design */
 
 /* Small Mobile Devices (up to 576px) */
