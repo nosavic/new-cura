@@ -1,0 +1,173 @@
+.profile-wrapper {
+  max-width: 1280px;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/Hero-section.png");
+  background-color: #83c0b9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-container {
+  max-width: 484px;
+  width: 100%;
+  padding: 4rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 64px auto;
+  border-radius: 4px;
+  gap: 2rem;
+}
+
+.profile-heading {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.profile-form {
+  width: 100%;
+}
+
+.name-box,
+.number-box,
+.id-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  > label {
+    font-weight: 600;
+  }
+
+  > input {
+    padding-inline: 16px;
+    padding-block: 8px;
+
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #555;
+    }
+
+    &::-moz-placeholder {
+      font-size: 14px;
+      color: #555;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 14px;
+      color: #555;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 14px;
+      color: #555;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+
+.id-box {
+  > span {
+    > p {
+      font-size: 12px;
+      color: #555;
+    }
+  }
+}
+
+.conditions-box {
+  display: flex;
+  flex-direction: column;
+
+  > select {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    color: #555;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 44px;
+  }
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  > .skip-btn {
+    padding-block: 8px;
+    padding-inline: 12px;
+    background-color: transparent;
+    color: #111111;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: #338f85;
+      border: 1px solid #338f85;
+    }
+  }
+
+  > .finish-btn {
+    padding-block: 8px;
+    padding-inline: 12px;
+    background-color: #338f85;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      background-color: #267168;
+    }
+  }
+}
+
+#submitCta {
+  -webkit-margin-before: 1rem;
+  margin-block-start: 1rem;
+  padding-block: 0.5rem;
+  border: 1px solid #338f85;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #338f85;
+    color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-wrapper {
+    padding: 1rem;
+  }
+  .conditions-box {
+    > select {
+      width: 100%;
+    }
+  }
+
+  .profile-container {
+    padding: 2rem;
+    margin: 1.5rem auto;
+  }
+
+  .profile-heading {
+    text-align: center;
+  }
+}

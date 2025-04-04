@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 
 const patientSchema = new mongoose.Schema(
   {
+    PatientID: { type: String, unique: true, default: () => new mongoose.Types.ObjectId().toString() },
     fullName: { type: String, required: true },
     dateOfBirth: { type: Date, required: true },
     gender: { type: String, enum: ["Male", "Female", "Other"], required: true },
@@ -12,7 +13,7 @@ const patientSchema = new mongoose.Schema(
     city: { type: String, required: true },
     state: { type: String, required: true },
     country: { type: String, required: true },
-    bloodType: { type: String, enum: ["A", "B", "AB", "O"], required: true },
+    bloodType: { type: String, enum: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"], required: true },
     allergies: { type: [String], default: [] },
     medicalHistory: { type: [String], default: [] },
     emergencyContact: {
