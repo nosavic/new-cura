@@ -4,6 +4,7 @@ import SignUp from "./components/forms/SignUp";
 import SignIn from "./components/forms/SignIn";
 
 import ProcessingPage from "./components/ProcessingPage";
+import PaymentModal from "./components/PaymentModal";
 
 // import FindMeds from "./pages/FindMeds";
 import SearchPage from "./pages/SearchPage";
@@ -16,11 +17,14 @@ function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<SignUp />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
 
       <Route path = "/processing" element = {<ProcessingPage/>}/>
+
+      <Route path = "/paymentmodal" element = {<PaymentModal/>}/>
+
 
       <Route
         path="/findmeds"
@@ -32,10 +36,9 @@ function App() {
         }
       />
       <Route path="/search-summary" element={<SearchpageSummary />} />
-      <Route path="/complete-profile" element={<ProfileSignup />} />
-
+      <Route path="/complete-profile" element={<ProfileSignup />} 
     </Routes>
-  );
+  ); 
 }
 
 export default App;
