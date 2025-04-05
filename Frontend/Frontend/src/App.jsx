@@ -4,6 +4,7 @@ import SignUp from "./components/forms/SignUp";
 import SignIn from "./components/forms/SignIn";
 import FindMeds from "./pages/FindMeds";
 import TransactionSuccess from "./pages/TransactionSuccess";
+import PaymentSuccess from "./pages/PaymentSuccess";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/signin" element={<SignIn />} />
       <Route path="/findmeds" element={<FindMeds />} />
       <Route path="/transactionsuccess" element={<TransactionSuccess/>}/>
+      <Route path="/paymentsuccess" element={<PaymentSuccess/>}/>
     </Routes>
   );
 }
