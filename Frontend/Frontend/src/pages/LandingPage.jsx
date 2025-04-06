@@ -106,7 +106,7 @@ const LandingPage = () => {
               <img src="./src/assets/card-1-img.svg" alt="Tablets image" />
             </div>
 
-            <div className="card-text-section">
+            <div className="card-text-section card-text-section-1">
               <span className="name-pre">
                 <h4>Tab Valsatan 2.5mg</h4>
                 <p>Take one Once a Day For 7 Days</p>
@@ -220,6 +220,28 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      <div className="sixth-level-content">
+<h2>Get Started with Curamap</h2>
+
+<div className="portal portal-for-patients">
+  <button>For Patients</button>
+  <div>
+<img src="./src/assets/forpatients.svg" alt="" />
+  </div>
+  <button>Sign up</button>
+</div>
+
+<div className="portal portal-for-pharmacy">
+  <button>For Pharmacies</button>
+  <div>
+<img src="./src/assets/phamacare.svg" alt="" />
+  </div>
+  <button>Sign up</button>
+</div>
+      </div>
+
+      
     </div>
   );
 };

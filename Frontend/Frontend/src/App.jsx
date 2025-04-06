@@ -17,7 +17,7 @@ function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
   return (
     <Routes>
-      <Route path="/" element={<SignUp />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
 
@@ -36,7 +36,7 @@ function App() {
         }
       />
       <Route path="/search-summary" element={<SearchpageSummary />} />
-      <Route path="/complete-profile" element={<ProfileSignup />} 
+      <Route path="/complete-profile" element={<ProfileSignup />} />
     </Routes>
   ); 
 }

@@ -183,6 +183,55 @@ body {
   border-bottom: 1px solid #080808;
 }
 
+
+.card-1-img-container {
+  position: absolute;
+  display: flex;
+  
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;  
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 25rem;
+  border-radius: 1em;
+  padding: 10rem;
+  max-width: 500px;
+  font-size: 14px;
+  border: 1px solid #333;
+}
+
+.card-3-img-container {
+  position: absolute;
+  border-radius: 3em;
+  bottom: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+.card-text-section {
+  margin-top: 10rem;
+}
+
+.card-text-section-1 {
+  margin-top: 15rem;
+}
+
 .third-level-content-text {
   display: flex;
   width: 50em;
@@ -223,37 +272,7 @@ body {
   flex-direction: column;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 24rem;
-  height: 20rem;
-  border-radius: 1em;
-  padding: 10rem;
-  max-width: 500px;
-  font-size: 14px;
-  border: 1px solid #333;
-}
 
-.card-3-img-container {
-  position: absolute;
-  border-radius: 3em;
-  bottom: 0.5em;
-  left: 1em;
-  max-width: 100%;
-}
-.card-text-section {
-  margin-top: 5rem;
-}
 .name-pre h4,
 p {
   text-wrap: nowrap;
@@ -343,6 +362,13 @@ p {
   text-wrap: wrap;
 }
 
+
+/* sisth levl content*/
+
+
+.sixth-level-content {
+  display: flex;
+}
 /* Responsive Design */
 
 /* Small Mobile Devices (up to 576px) */
