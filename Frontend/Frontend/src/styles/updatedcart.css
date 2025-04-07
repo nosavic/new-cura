@@ -1,0 +1,82 @@
+.shopping-cart {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.order-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.medicine-cards-section {
+  flex: 2;
+}
+
+.medicine-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.order-total-section {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.summary-details {
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-divider {
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.total-row {
+  font-weight: bold;
+}
+
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.continue-btn,
+.checkout-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.continue-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.checkout-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.prescription-notice {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/searchsummary.css";
+import UpdatedCart from "./UpdatedCart";
 
 const SearchpageSummary = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const SearchpageSummary = () => {
   const continueShopping = () => {
     // For now, we'll just show an alert
     alert(`Continue shopping cart with ${medicineCount} medicines`);
-    // navigate("");
+    navigate("/updatedcart", { state: { selectedMedicines } });
   };
 
   return (
@@ -36,8 +37,10 @@ const SearchpageSummary = () => {
               {selectedMedicines.map((medicine) => (
                 <li key={medicine.id}>
                   {medicine.name} - {medicine.dosage} - {medicine.packageSize} -{" "}
-                  {medicine.quantity}
-                  {medicine.prescription}
+                  {medicine.quantity} - ₦{medicine.calculatedPrice}
+                  {medicine.prescription && (
+                    <span className="rx-badge">Rx</span>
+                  )}
                 </li>
               ))}
             </ul>

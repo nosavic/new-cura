@@ -5,10 +5,14 @@ import SignIn from "./components/forms/SignIn";
 import FindMeds from "./pages/FindMeds";
 import SearchPage from "./pages/SearchPage";
 import SearchpageSummary from "./pages/SearchpageSummary";
+import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
+  const [currentPrice, setCurrentPrice] = useState(
+    medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize]
+  );
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
@@ -23,7 +27,16 @@ function App() {
           />
         }
       />
-      <Route path="/search-summary" element={<SearchpageSummary />} />
+      <Route
+        path="/search-summary"
+        element={
+          <SearchpageSummary
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+          />
+        }
+      />
+      <Route path="/updatedcart" element={<UpdatedCart />} />
     </Routes>
   );
 }

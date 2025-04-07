@@ -19,7 +19,8 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
       setSuggestions([]);
       return;
     }
-
+    // Filter medicines based on the search term
+    // and set the suggestions state
     const filtered = medicines.filter((medicine) =>
       medicine.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -94,6 +95,7 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
       dosage: medicine.selectedDosage,
       packageSize: medicine.selectedPackageSize,
       quantity: medicine.quantity,
+      price: medicine.prices,
       prescription: medicine.prescription || false,
     }));
 
