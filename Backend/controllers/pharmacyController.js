@@ -29,14 +29,17 @@ exports.registerPharmacy = async (req, res) => {
       country,
       password,
       licenseNumber,
+      openingHours,
     } = req.body;
 
-    // Check if email already exists
+    if (!openingHours) {
+      return res.status(400).json({ message: "Opening hours are required" });
+    }
+
     const existingPharmacy = await Pharmacy.findOne({ email });
     if (existingPharmacy)
       return res.status(400).json({ message: "Email already registered" });
 
-    // Create new pharmacy
     const pharmacy = new Pharmacy({
       name,
       owner,
@@ -48,9 +51,9 @@ exports.registerPharmacy = async (req, res) => {
       country,
       password,
       licenseNumber,
+      openingHours,
     });
 
-    // Save to database
     await pharmacy.save();
 
     res.status(201).json({

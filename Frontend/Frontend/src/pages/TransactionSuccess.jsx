@@ -1,5 +1,5 @@
 import myImage from "../assets/transactImg.png";
-import profilePic from "../assets/transactionNum.png"
+import profilePic from "../assets/transactionNum.png";
 import "../styles/transactionsuccess.css";
 import imgLine from "../assets/recieptline.png"
 

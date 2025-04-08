@@ -1,0 +1,185 @@
+/* Modal Overlay (Backdrop) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Box */
+  .modal {
+    background: white;
+    padding: 20px;
+    width: 380px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+  }
+  
+  /* Payment Title */
+  h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Amount to Pay */
+  .amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  
+  /* Payment Options Container */
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+  }
+  
+  /* Individual Payment Option */
+  .payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .payment-option.selected {
+    border-color: #80cbc4;
+    background: #e0f2f1;
+  }
+  
+  /* Payment Text */
+  .payment-option span {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Payment Actions (Set as Default & Edit) */
+  .actions {
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .actions a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #007bff;
+    font-weight: 500;
+  }
+  
+  /* Radio Button Styling */
+  .payment-option input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .payment-option input[type="radio"]:checked {
+    border-color: #007bff;
+    background: #007bff;
+  }
+  
+  .payment-option input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Modal Buttons */
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cancel,
+  .confirm {
+    /* padding: 12px 20px; */
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    width: 9rem;
+    height: 2rem;
+  
+  }
+  
+  .cancel {
+    background: white;
+    color: red;
+    font-size: .8rem;
+    font-weight: 300;
+    border: 1px solid black;
+    padding-top: .3rem;
+    padding-bottom: 1rem;
+   
+
+    
+  }
+  
+  .confirm {
+    background: #80cbc4;
+    color: white;
+    padding: .5rem;
+    border: 1px solid black;
+  }
+  
+  .confirm:disabled {
+    background: #b2dfdb;
+    cursor: not-allowed;
+  }
+  
+  /* Security Info */
+  .secured {
+    font-size: 12px;
+    margin-top: 3rem;
+    /* color: gray; */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-left: 6rem;
+
+   
+  }
+
+.secured span {
+    margin-left: .2rem;
+}
+  
+  .secured strong {
+    font-weight: bold;
+    color: black;
+    margin-left: .2rem;
+  }
+  
