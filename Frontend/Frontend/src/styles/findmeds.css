@@ -92,6 +92,10 @@ header {
   gap: 80px;
 }
 
+.med-description {
+  text-wrap: wrap;
+}
+
 .details {
   display: flex;
   flex-direction: column;
