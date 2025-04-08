@@ -363,11 +363,16 @@ p {
 }
 
 
-/* sisth levl content*/
+/* sixth levl content*/
 
 
 .sixth-level-content {
   display: flex;
+}
+
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
 }
 /* Responsive Design */
 
