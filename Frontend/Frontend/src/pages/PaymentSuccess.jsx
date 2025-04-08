@@ -6,6 +6,7 @@ function PaymentSuccess (){
 
     return(
         <>
+        <section className="body">
   <section className="divhouse">
 <div className="divorder">
     <p className="paymentSuccessful">Payment Successfull</p>
@@ -23,6 +24,7 @@ function PaymentSuccess (){
 <div className="orderDetails">
     <button className="buttonOrderDetails">Order Details</button>
 </div>
+  </section>
   </section>
 
   </>
