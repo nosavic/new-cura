@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f0f7ff;
+}
+
+
+.Logo {
+    padding-left: 1.5em;
+    padding-top: 1.5em;
+  }
+  
+  .MainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    gap: 2rem;
+  }
+  
+  .TextContent {
+    max-width: 600px;
+  }
+  
+  .TextContent h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .TextContent p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .Buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .Buttons button {
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .Buttons button:first-child {
+    background-color: transparent;
+    color: #007E85;
+    border: none;
+  }
+  
+  .Buttons button:first-child:hover {
+    color: #0f0f0f;
+  }
+  
+  .Buttons button:last-child {
+    background-color: #007E85;
+    color: #f0f7ff;
+    border: 1px solid #4a9eff;
+  }
+  
+  .Buttons button:last-child:hover {
+    color: #080808;
+  }
+  
+  @media (max-width: 768px) {
+    .MainContent {
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .TextContent h1 {
+      font-size: 2rem;
+    }
+  
+    .TextContent p {
+      font-size: 1rem;
+    }
+  
+    .Buttons {
+      justify-content: center;
+    }
+  }
