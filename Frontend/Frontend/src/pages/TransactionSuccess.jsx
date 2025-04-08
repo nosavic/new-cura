@@ -8,6 +8,7 @@ function TransactionSuccess() {
 
     return(
   <>
+  <section className="body">
    <section className="container">
     
       <div className="transfer">
@@ -40,7 +41,7 @@ function TransactionSuccess() {
       </div>
    </section>
 
-
+   </section>
 
    </>
     );
