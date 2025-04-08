@@ -3,6 +3,11 @@ import LandingPage from "./pages/LandingPage";
 import SignUp from "./components/forms/SignUp";
 import SignIn from "./components/forms/SignIn";
 
+import FindMeds from "./pages/FindMeds";
+import TransactionSuccess from "./pages/TransactionSuccess";
+import PaymentSuccess from "./pages/PaymentSuccess";
+
+
 import ProcessingPage from "./components/ProcessingPage";
 import PaymentModal from "./components/PaymentModal";
 
@@ -13,6 +18,7 @@ import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 
 
+
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
   return (
@@ -20,6 +26,11 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
+
+      <Route path="/findmeds" element={<FindMeds />} />
+      <Route path="/transactionsuccess" element={<TransactionSuccess/>}/>
+      <Route path="/paymentsuccess" element={<PaymentSuccess/>}/>
+
 
       <Route path = "/processing" element = {<ProcessingPage/>}/>
 
@@ -37,6 +48,7 @@ function App() {
       />
       <Route path="/search-summary" element={<SearchpageSummary />} />
       <Route path="/complete-profile" element={<ProfileSignup />} />
+
     </Routes>
   ); 
 }
