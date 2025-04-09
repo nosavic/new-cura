@@ -1,6 +1,6 @@
 import trash from "../assets/trash.png";
+import { useState } from "react";
 
-// src/components/MedicineCard.jsx
 const MedicineCard = ({
   medicine,
   onRemove,
@@ -8,6 +8,26 @@ const MedicineCard = ({
   onPackageSizeChange,
   onQuantityChange,
 }) => {
+  const [currentPrice, setCurrentPrice] = useState(
+    medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize]
+  );
+
+  const handleDosageChange = (e) => {
+    const newDosage = e.target.value;
+    onDosageChange(medicine.id, newDosage);
+    updatePrice(newDosage, medicine.selectedPackageSize);
+  };
+
+  const handlePackageSizeChange = (e) => {
+    const newPackageSize = e.target.value;
+    onPackageSizeChange(medicine.id, newPackageSize);
+    updatePrice(medicine.selectedDosage, newPackageSize);
+  };
+
+  const updatePrice = (dosage, packageSize) => {
+    setCurrentPrice(medicine.prices[dosage][packageSize]);
+  };
+
   const handleIncrement = () => {
     onQuantityChange(medicine.id, medicine.quantity + 1);
   };
@@ -24,11 +44,15 @@ const MedicineCard = ({
         <h3 className="medicine-name">{medicine.name}</h3>
         <p className="medicine-description">{medicine.description}</p>
         <div className="medicine-options">
+          <div className="item-total">
+            Total: ₦{currentPrice * medicine.quantity}
+          </div>
+
           <div className="option-group">
             <label>Dosage:</label>
             <select
               value={medicine.selectedDosage}
-              onChange={(e) => onDosageChange(medicine.id, e.target.value)}
+              onChange={handleDosageChange}
             >
               {medicine.dosages.map((dosage) => (
                 <option key={dosage} value={dosage}>
@@ -42,7 +66,7 @@ const MedicineCard = ({
             <label>Package Size:</label>
             <select
               value={medicine.selectedPackageSize}
-              onChange={(e) => onPackageSizeChange(medicine.id, e.target.value)}
+              onChange={handlePackageSizeChange}
             >
               {medicine.packageSizes.map((size) => (
                 <option key={size} value={size}>
@@ -55,7 +79,11 @@ const MedicineCard = ({
           <div className="option-group">
             <label>Quantity:</label>
             <div className="quantity-control">
-              <button className="quantity-btn" onClick={handleDecrement}>
+              <button
+                className="quantity-btn"
+                onClick={handleDecrement}
+                aria-label="Decrease quantity"
+              >
                 -
               </button>
               <input
@@ -63,11 +91,19 @@ const MedicineCard = ({
                 min="1"
                 value={medicine.quantity}
                 onChange={(e) =>
-                  onQuantityChange(medicine.id, parseInt(e.target.value) || 1)
+                  onQuantityChange(
+                    medicine.id,
+                    Math.max(1, parseInt(e.target.value) || 1)
+                  )
                 }
                 className="quantity-input"
+                aria-label="Quantity input"
               />
-              <button className="quantity-btn" onClick={handleIncrement}>
+              <button
+                className="quantity-btn"
+                onClick={handleIncrement}
+                aria-label="Increase quantity"
+              >
                 +
               </button>
             </div>
@@ -78,7 +114,7 @@ const MedicineCard = ({
       <img
         className="trash"
         src={trash}
-        alt=""
+        alt="Remove medicine"
         onClick={() => onRemove(medicine.id)}
       />
     </div>
