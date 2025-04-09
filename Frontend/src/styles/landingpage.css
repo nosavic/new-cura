@@ -368,11 +368,65 @@ p {
 
 .sixth-level-content {
   display: flex;
+  flex-direction: column;
+
 }
 
+
+.card-con{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  border: #007e85 solid 1px; 
+}
 .testimonial-card{
   display: flex;
   flex-direction: column;
+}
+
+.portal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  flex-direction: column;
+  border: #007e85  solid 1px; 
+}
+
+
+
+
+.patients-portal-card-img-container,
+.pharmacy-portal-card-img-container{
+  display: flex;
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+
+.patients-portal-card-text,
+.pharmacy-portal-card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  text-wrap: wrap;
 }
 /* Responsive Design */
 

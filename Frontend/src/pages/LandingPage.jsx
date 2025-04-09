@@ -222,26 +222,48 @@ const LandingPage = () => {
       </div>
 
       <div className="sixth-level-content">
-<h2>Get Started with Curamap</h2>
+        <h2>Get Started with Curamap</h2>
 
-<div className="portal portal-for-patients">
-  <button>For Patients</button>
-  <div>
-<img src="./src/assets/forpatients.svg" alt="" />
-  </div>
-  <button>Sign up</button>
-</div>
-
-<div className="portal portal-for-pharmacy">
-  <button>For Pharmacies</button>
-  <div>
-<img src="./src/assets/phamacare.svg" alt="" />
-  </div>
-  <button>Sign up</button>
-</div>
-      </div>
-
+<div className="cards-container">
+<div className="card-con">
+        <button>For Patients</button>
+        <div className="portal portal-for-patients">
+          <div className="patients-portal-card">
+            <div className="patients-portal-card-img-container">
+              <img src="./src/assets/forpatients.svg" alt="" />
+            </div>
+            <div className="patients-portal-card-text">
+              <h3>Easy Access to Medications</h3>
+              <p>Order your Medication and Healthcare Solutions With Ease</p>
+              <button>Sign up</button>
+            </div>
+          </div>
+        </div>
+        </div>
       
+      <div className="card-con">
+      <button>For Pharmacies</button>
+        <div className="portal portal-for-pharmacy">
+          <div className="pharmacy-portal-card">
+            <div children="pharmacy-portal-card-img-container">
+              <img src="./src/assets/phamacare.svg" alt="" />
+            </div>
+            <div className="pharmacy-portal-card-text">
+              <h3>Pharmaceutical Care</h3>
+              <p>
+                Transforming Nigerian Pharmaceutical <br />
+                Healthcare Through Enhanced Pharmacy Fulfillment
+              </p>
+              <button>Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+       
+       
+      </div>
     </div>
   );
 };
