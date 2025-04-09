@@ -19,6 +19,7 @@ const SearchpageSummary = () => {
 
   const continueShopping = () => {
     // For now, we'll just show an alert
+    alert(`Continue shopping cart with ${medicineCount} medicines`);
 
     navigate("/updatedcart", { state: { selectedMedicines } });
   };
