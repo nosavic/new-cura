@@ -7,7 +7,6 @@ const SearchpageSummary = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { medicineCount = 0, selectedMedicines = [] } = location.state || {};
-  // Function to handle the action when the user clicks "View Shopping Cart"
 
   // Check if any prescription medicines are selected
   const hasPrescriptionItems = selectedMedicines.some(
@@ -20,7 +19,7 @@ const SearchpageSummary = () => {
 
   const continueShopping = () => {
     // For now, we'll just show an alert
-    alert(`Continue shopping cart with ${medicineCount} medicines`);
+
     navigate("/updatedcart", { state: { selectedMedicines } });
   };
 
@@ -34,15 +33,20 @@ const SearchpageSummary = () => {
           <div className="medicine-list">
             <h3>Selected Medicines:</h3>
             <ul className="summary-list">
-              {selectedMedicines.map((medicine) => (
-                <li key={medicine.id}>
-                  {medicine.name} - {medicine.dosage} - {medicine.packageSize} -{" "}
-                  {medicine.quantity} - ₦{medicine.calculatedPrice}
-                  {medicine.prescription && (
-                    <span className="rx-badge">Rx</span>
-                  )}
-                </li>
-              ))}
+              {selectedMedicines.map((medicine) => {
+                const { price, quantity } = medicine;
+                const calculatedPrice = Number(price) * Number(quantity);
+
+                return (
+                  <li key={medicine.id}>
+                    {medicine.name} - {medicine.dosage} - {medicine.packageSize}{" "}
+                    - {medicine.quantity} - ₦{calculatedPrice}
+                    {medicine.prescription && (
+                      <span className="rx-badge">Rx</span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -66,7 +70,7 @@ const SearchpageSummary = () => {
         {hasPrescriptionItems && (
           <div className="prescription-warning">
             <p className="prescription-warning-text">
-              ⚠️ You have prescription items in your cart.
+              ⚠ You have prescription items in your cart.
             </p>
             <p className="prescription-text">
               {" "}

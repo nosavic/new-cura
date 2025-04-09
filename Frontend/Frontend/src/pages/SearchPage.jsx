@@ -89,15 +89,33 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
     }
 
     // Prepare the data for submission
-    const submissionData = selectedMedicines.map((medicine) => ({
-      id: medicine.id,
-      name: medicine.name,
-      dosage: medicine.selectedDosage,
-      packageSize: medicine.selectedPackageSize,
-      quantity: medicine.quantity,
-      price: medicine.prices,
-      prescription: medicine.prescription || false,
-    }));
+    // const submissionData = selectedMedicines.map((medicine) => ({
+    //   id: medicine.id,
+    //   name: medicine.name,
+    //   dosage: medicine.selectedDosage,
+    //   description: medicine.description,
+    //   packageSize: medicine.selectedPackageSize,
+    //   quantity: medicine.quantity,
+    //   prescription: medicine.prescription || false,
+    //   price:
+    //     medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize],
+    // }));
+
+    const submissionData = selectedMedicines.map((medicine) => {
+      const calculatedPrice =
+        medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize] *
+        medicine.quantity;
+      return {
+        id: medicine.id,
+        name: medicine.name,
+        description: medicine.description,
+        dosage: medicine.selectedDosage,
+        packageSize: medicine.selectedPackageSize,
+        quantity: medicine.quantity,
+        price: calculatedPrice,
+        prescription: medicine.prescription || false,
+      };
+    });
 
     // Log the data (optional)
     console.log("Submitting medicine data:", submissionData);

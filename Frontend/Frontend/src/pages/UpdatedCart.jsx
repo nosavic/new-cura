@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/updatedcart.css";
+import brandlogo from "../assets/brandlogo.svg";
 
 const UpdatedCart = () => {
   const navigate = useNavigate();
@@ -10,86 +11,117 @@ const UpdatedCart = () => {
   const medicineCount = selectedMedicines.length;
 
   // Calculate total price
-  const calculateTotal = () => {
-    return selectedMedicines.reduce((total, medicine) => {
-      const price =
-        medicine.prices?.[medicine.dosage]?.[medicine.packageSize] || 0;
-      const quantity = medicine.quantity || 0;
-      return total + price * quantity;
-    }, 0);
-  };
-
-  const subtotal = calculateTotal();
-  const shipping = 1500;
-  const total = subtotal + shipping;
 
   const continueShopping = () => navigate("/findmeds");
   const proceedToCheckout = () => navigate("/checkout");
 
-  const proceedToSummary = () => {
-    const updatedMedicines = selectedMedicines.map((medicine) => {
-      const normalizedDosage = medicine.dosage?.trim().toLowerCase();
-      const normalizedPackageSize = medicine.packageSize?.trim().toLowerCase();
-      const price =
-        medicine.prices?.[normalizedDosage]?.[normalizedPackageSize] || 0;
+  const subtotal = selectedMedicines.reduce((acc, medicine) => {
+    const { price, quantity } = medicine;
+    const calculatedPrice = Number(price) * Number(quantity);
 
-      return {
-        ...medicine,
-        calculatedPrice: price * medicine.quantity,
-      };
-    });
+    const totalMedicinePrice = calculatedPrice * (quantity || 1);
+    return acc + totalMedicinePrice;
+  }, 0);
 
-    navigate("/searchpagesummary", {
-      state: { selectedMedicines: updatedMedicines, medicineCount },
-    });
-  };
+  const tax = 1500;
+
+  const total = subtotal + tax;
+
+  // Check if any prescription medicines are selected
 
   return (
     <div className="shopping-cart">
-      <h2>Your Shopping Cart</h2>
-      <p>You've added {medicineCount} medicine(s) to your cart</p>
+      <div className="search-header">
+        <img className="brandlogo" src={brandlogo} alt="brandlogo" />
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search for medicine..."
+            className="search-input"
+          />
+        </div>
+        <div className="cart-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="cart-svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+          <span className="cart-count">{medicineCount}</span>
+        </div>
+      </div>
+
+      <div className="cart-text">
+        <div className="cart-text-1">
+          <p>Cart</p>
+          <p>Checkout</p>
+        </div>
+        <p className="secure">100% Secure</p>
+      </div>
+      <div className="cont-shopping" onClick={continueShopping}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+
+        <button onClick={continueShopping} className="cont-btn">
+          Continue Shopping
+        </button>
+      </div>
+
+      <h2>Your Cart</h2>
+      <p>You have {medicineCount} item(s) in your cart</p>
       <div className="cart-container">
         <div className="medicine-list">
           {selectedMedicines.length > 0 ? (
             selectedMedicines.map((medicine) => {
-              // Normalize dosage and package size keys
-              const normalizedDosage = medicine.dosage?.trim().toLowerCase();
-              const normalizedPackageSize = medicine.packageSize
-                ?.trim()
-                .toLowerCase();
-
-              // Debugging logs
-              console.log("Medicine Object:", medicine);
-              console.log("Prices Object:", medicine.prices);
-              console.log("Normalized Dosage:", normalizedDosage);
-              console.log("Normalized Package Size:", normalizedPackageSize);
-
-              // Access price with normalized keys
-              const price =
-                medicine.prices?.[normalizedDosage]?.[normalizedPackageSize] ||
-                0;
-
-              if (
-                !medicine.prices?.[normalizedDosage]?.[normalizedPackageSize]
-              ) {
-                console.warn(
-                  `Price not found for dosage: ${medicine.dosage}, package size: ${medicine.packageSize}`
-                );
-              }
-
-              console.log("Calculated Price:", price);
-
+              const { price, quantity } = medicine;
+              const calculatedPrice = Number(price) * Number(quantity);
               return (
                 <div key={medicine.id} className="cart-medicine-card">
                   <div className="medicine-info">
-                    <h3>{medicine.name}</h3>
-                    <p>{medicine.description}</p>
-                    <div className="medicine-details">
-                      <span>Dosage: {medicine.dosage}</span>
-                      <span>Package: {medicine.packageSize}</span>
-                      <span>Quantity: {medicine.quantity}</span>
-                      <span>₦{(price * medicine.quantity).toFixed(2)}</span>
+                    <div className="medicine-name">
+                      <h3>{medicine.name}</h3>
+                      <span className="medicine-price">₦{calculatedPrice}</span>
                     </div>
+                    <p className="medicine-description">
+                      {medicine.description}
+                    </p>
+                    <div className="medicine-details">
+                      <span>{medicine.dosage}</span>
+                      <span>{medicine.packageSize}</span>
+                      <span>Quantity: {medicine.quantity}</span>
+                    </div>
+                    {medicine.prescription ? (
+                      <div className="medicine-prescription">
+                        <p>Upload prescription</p>
+                        <p>Upload prescription: (Png, pdf, Jpg, jpeg)</p>
+                        <input type="file" className="prescription-input" />
+                      </div>
+                    ) : (
+                      <div className="medicine-prescription">
+                        {" "}
+                        <p>No prescription required</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -107,8 +139,8 @@ const UpdatedCart = () => {
               <span>₦{subtotal.toFixed(2)}</span>
             </div>
             <div className="summary-row">
-              <span>Shipping:</span>
-              <span>₦{shipping.toFixed(2)}</span>
+              <span>Tax:</span>
+              <span>₦{tax.toFixed(2)}</span>
             </div>
             <div className="summary-divider"></div>
             <div className="summary-row total-row">
@@ -117,9 +149,6 @@ const UpdatedCart = () => {
             </div>
           </div>
           <div className="order-actions">
-            <button onClick={continueShopping} className="continue-btn">
-              Continue Shopping
-            </button>
             <button
               onClick={proceedToCheckout}
               className="checkout-btn"

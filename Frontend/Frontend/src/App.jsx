@@ -10,9 +10,9 @@ import { useState } from "react";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
-  const [currentPrice, setCurrentPrice] = useState(
-    medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize]
-  );
+  // const [currentPrice, setCurrentPrice] = useState(
+  //   medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize]
+  // );
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
