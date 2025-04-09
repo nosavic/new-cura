@@ -1,6 +1,6 @@
 const Pharmacy = require("../models/PharmacyModel");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const dotenv = require("dotenv");
 
 dotenv.config(); // Load environment variables
