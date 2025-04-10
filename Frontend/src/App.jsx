@@ -13,6 +13,7 @@ import PaymentModal from "./components/PaymentModal";
 // import FindMeds from "./pages/FindMeds";
 import SearchPage from "./pages/SearchPage";
 import SearchpageSummary from "./pages/SearchpageSummary";
+import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 
@@ -24,7 +25,7 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
 
-      <Route path="/findmeds" element={<FindMeds />} />
+      <Route path="" element={<FindMeds />} />
       <Route path="/transactionsuccess" element={<TransactionSuccess />} />
       <Route path="/paymentsuccess" element={<PaymentSuccess />} />
 
@@ -41,7 +42,16 @@ function App() {
           />
         }
       />
-      <Route path="/search-summary" element={<SearchpageSummary />} />
+      <Route
+        path="/search-summary"
+        element={
+          <SearchpageSummary
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+          />
+        }
+      />
+      <Route path="/updatedcart" element={<UpdatedCart />} />
       <Route path="/complete-profile" element={<ProfileSignup />} />
     </Routes>
   );
