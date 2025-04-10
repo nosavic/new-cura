@@ -224,45 +224,56 @@ const LandingPage = () => {
       <div className="sixth-level-content">
         <h2>Get Started with Curamap</h2>
 
-<div className="cards-container">
-<div className="card-con">
-        <button>For Patients</button>
-        <div className="portal portal-for-patients">
-          <div className="patients-portal-card">
-            <div className="patients-portal-card-img-container">
-              <img src="./src/assets/forpatients.svg" alt="" />
-            </div>
-            <div className="patients-portal-card-text">
-              <h3>Easy Access to Medications</h3>
-              <p>Order your Medication and Healthcare Solutions With Ease</p>
-              <button>Sign up</button>
+        <div className="cards-container">
+          <div className="card-con">
+            <span className="heading">For Patients</span>
+            <div className="portal portal-for-patients">
+              <div className="patients-portal-card">
+                <div className="patients-portal-card-img-container">
+                  <img src="./src/assets/forpatients.svg" alt="" />
+                </div>
+                <div className="patients-portal-card-text">
+                  <h3>Easy Access to Medications</h3>
+                  <p>
+                    Order your Medication and Healthcare Solutions With Ease
+                  </p>
+                  <button>Sign up</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        </div>
-      
-      <div className="card-con">
-      <button>For Pharmacies</button>
-        <div className="portal portal-for-pharmacy">
-          <div className="pharmacy-portal-card">
-            <div children="pharmacy-portal-card-img-container">
-              <img src="./src/assets/phamacare.svg" alt="" />
-            </div>
-            <div className="pharmacy-portal-card-text">
-              <h3>Pharmaceutical Care</h3>
-              <p>
-                Transforming Nigerian Pharmaceutical <br />
-                Healthcare Through Enhanced Pharmacy Fulfillment
-              </p>
-              <button>Sign up</button>
+
+          <div className="card-con">
+            <span className="heading">For Pharmacies</span>
+            <div className="portal portal-for-pharmacy">
+              <div className="pharmacy-portal-card">
+                <div children="pharmacy-portal-card-img-container">
+                  <img src="./src/assets/phamacare.svg" alt="" />
+                </div>
+                <div className="pharmacy-portal-card-text">
+                  <h3>Pharmaceutical Care</h3>
+                  <p>
+                    Transforming Nigerian Pharmaceutical <br />
+                    Healthcare Through Enhanced Pharmacy Fulfillment
+                  </p>
+                  <button>Sign up</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-</div>
 
-       
-       
+      <div className="seventh-level-content">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq">
+          <ul>
+            <li>What does Curamap do</li>
+            <li>How does Curamap Measure The Quality of its Service</li>
+            <li>Is my Data safe and confidential</li>
+            <li>can i order drugs for someone else ?</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
