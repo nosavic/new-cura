@@ -1,0 +1,26 @@
+[
+  {
+    "label": "SEP",
+    "value": 30
+  },
+  {
+    "label": "OCT",
+    "value": 200
+  },
+  {
+    "label": "NOV",
+    "value": 90
+  },
+  {
+    "label": "DEC",
+    "value": 50
+  },
+  {
+    "label": "JAN",
+    "value": 150
+  },
+  {
+    "label": "FEB",
+    "value": 80
+  }
+]

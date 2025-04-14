@@ -4,6 +4,8 @@ import OrdersTable from "../components/DashboardComponents/OrdersTable";
 import RevenueChart from "../components/DashboardComponents/RevenueChart";
 import DashboardCard from "../components/DashboardComponents/DashboardCard";
 import Sidebar from "../components/DashboardComponents/Sidebar";
+import DrugsSold from "../components/DashboardComponents/DrugsSold";
+import VendorActivity from "../components/DashboardComponents/VendorActivity";
 import "../styles/dashboard.css";
 
 const Dashboard = () => {
@@ -14,9 +16,9 @@ const Dashboard = () => {
         <Header />
         <div className="dashboard">
           <div className="top-cards">
-            <DashboardCard title="Drugs Sold" value="500" subValue="400" />
-            <DashboardCard title="Vendor Activity" chart />
-            <DashboardCard title="Patients Attended" value="300" />
+            <DrugsSold />
+            <VendorActivity />
+            <DashboardCard  />
           </div>
           <div className="middle-section">
             <OrdersTable />
