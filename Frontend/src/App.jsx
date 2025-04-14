@@ -17,6 +17,9 @@ import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 
+//Adding a new route for dashboard page
+import Dashboard from "./pages/Dashboard";
+
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
   return (
@@ -32,6 +35,7 @@ function App() {
       <Route path="/processing" element={<ProcessingPage />} />
 
       <Route path="/paymentmodal" element={<PaymentModal />} />
+      <Route path="/dashboard" element={<Dashboard />} />
 
       <Route
         path="/findmeds"
