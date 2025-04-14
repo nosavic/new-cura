@@ -183,16 +183,18 @@ body {
   border-bottom: 1px solid #080808;
 }
 
+
 .card-1-img-container {
   position: absolute;
   display: flex;
-
+  
   gap: 15em;
   border-radius: 3em;
   top: 0.5em;
   left: 1em;
-  max-width: 100%;
+  max-width: 100%;  
 }
+
 
 .card-container {
   display: flex;
@@ -270,6 +272,7 @@ body {
   flex-direction: column;
 }
 
+
 .name-pre h4,
 p {
   text-wrap: nowrap;
@@ -330,6 +333,7 @@ p {
   max-width: 500px;
   font-size: 14px;
 
+  
   overflow: hidden;
 }
 
@@ -358,15 +362,71 @@ p {
   text-wrap: wrap;
 }
 
+
 /* sixth levl content*/
+
 
 .sixth-level-content {
   display: flex;
+  flex-direction: column;
+
 }
 
-.testimonial-card {
+
+.card-con{
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  border: #007e85 solid 1px; 
+}
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
+}
+
+.portal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  flex-direction: column;
+  border: #007e85  solid 1px; 
+}
+
+
+
+
+.patients-portal-card-img-container,
+.pharmacy-portal-card-img-container{
+  display: flex;
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+
+.patients-portal-card-text,
+.pharmacy-portal-card-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  text-wrap: wrap;
 }
 /* Responsive Design */
 
@@ -472,6 +532,7 @@ p {
     font-size: 1.1rem;
   }
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
@@ -657,16 +718,18 @@ body {
   border-bottom: 1px solid #080808;
 }
 
+
 .card-1-img-container {
   position: absolute;
   display: flex;
-
+  
   gap: 15em;
   border-radius: 3em;
   top: 0.5em;
   left: 1em;
-  max-width: 100%;
+  max-width: 100%;  
 }
+
 
 .card-container {
   display: flex;
@@ -744,6 +807,7 @@ body {
   flex-direction: column;
 }
 
+
 .name-pre h4,
 p {
   text-wrap: nowrap;
@@ -804,6 +868,7 @@ p {
   max-width: 500px;
   font-size: 14px;
 
+  
   overflow: hidden;
 }
 
@@ -832,105 +897,17 @@ p {
   text-wrap: wrap;
 }
 
+
 /* sixth levl content*/
+
 
 .sixth-level-content {
   display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid #080808;
 }
 
-.heading {
-  padding: 1em 1.2em;
-  border-radius: 0.5em;
-  background: #83c0b9;
-}
-
-.portal button{
-  padding: 0.2em 3em;
-  border-radius: 1em;
-}
-.card-con {
+.testimonial-card{
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.cards-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  padding: 4rem;
-}
-.testimonial-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.portal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-  height: 35rem;
-  border-radius: 0.5rem;
-  padding: 4rem;
-  flex-direction: column;
-  border: #007e85 solid 1px;
-}
-
-.patients-portal-card-img-container,
-.pharmacy-portal-card-img-container {
-  display: flex;
-  gap: 15em;
-  border-radius: 3em;
-  top: 0.5em;
-  left: 1em;
-  max-width: 100%;
-}
-
-.patients-portal-card-text,
-.pharmacy-portal-card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 1em;
-  text-wrap: wrap;
-}
-
-/* seventh level content */
-.seventh-level-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.seventh-level-content h2{
-  font-size: 2em;
-}
-.faq {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.faq ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  list-style-type: none;
-}
-
-.faq ul li {
-  border: 1px solid #080808;
-  border-radius: 0.5em;
-  padding: 1em 2em;
-  width: 55em;
 }
 /* Responsive Design */
 
