@@ -275,6 +275,42 @@ const LandingPage = () => {
           </ul>
         </div>
       </div>
+
+      <div className="eight-level-content">
+        <div className="First-column">
+          <h3>Copyright 2025 BRIX Templates | All Rights Reserved</h3>
+        </div>
+        <div className="second-column">
+          <h3>Company</h3>
+          <ul>
+            <li>About</li>
+            <li>Contact us</li>
+            <li>Careers</li>
+            <li>Culture</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div className="third-column">
+          <h3>Support</h3>
+          <ul>
+            <li>Getting Started</li>
+            <li>Help center</li>
+            <li>Server Status</li>
+            <li>Report a Bug</li>
+            <li>Chat support</li>
+          </ul>
+        </div>
+        <div className="Fourth-column">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Linkdel</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

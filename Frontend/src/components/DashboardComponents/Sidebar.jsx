@@ -5,6 +5,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="logo">
         <img src="./src/assets/LogoSymbol.svg" alt="logo symbol" />
+        <h4>Curamap</h4>
       </div>
       <nav>
         <ul className="sidebar-list">
@@ -12,7 +13,7 @@ const Sidebar = () => {
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
@@ -31,7 +32,7 @@ const Sidebar = () => {
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -50,7 +51,7 @@ const Sidebar = () => {
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
@@ -91,7 +92,7 @@ const Sidebar = () => {
             <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="currentColor"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"

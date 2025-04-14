@@ -1,14 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const orders = [
-    { name: 'John Doe', date: '10/02/2025', status: 'Pending' },
-    { name: 'Bryan Stan', date: '10/02/2025', status: 'Pending' },
-    { name: 'Doyin Micheal', date: '09/02/2025', status: 'Pending' },
-    { name: 'Rose Daniel', date: '08/02/2025', status: 'Picked-up' },
-  ];
-  
-  const OrdersTable = () => {
-    return (
+  { name: "John Doe", date: "10/02/2025", status: "Pending" },
+  { name: "Bryan Stan", date: "10/02/2025", status: "Pending" },
+  { name: "Doyin Micheal", date: "09/02/2025", status: "Pending" },
+  { name: "Rose Daniel", date: "08/02/2025", status: "Picked-up" },
+];
+
+const OrdersTable = () => {
+  return (
+    <div className="ordersTableWrapper">
       <div className="orders-table">
         <h3>Latest Orders</h3>
         <table>
@@ -30,7 +31,8 @@ const orders = [
           </tbody>
         </table>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default OrdersTable;

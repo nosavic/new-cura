@@ -13,7 +13,7 @@ const Header = () => {
           <span className="slider round"></span>
         </label>
         <img
-          src="https://i.pravatar.cc/40"
+          src="./src/assets/Avatar.svg"
           alt="User"
           className="profile-img"
         />
