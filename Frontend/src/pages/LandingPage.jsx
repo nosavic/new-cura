@@ -277,10 +277,11 @@ const LandingPage = () => {
       </div>
 
       <div className="eight-level-content">
-        <div className="First-column">
-          <h3>Copyright 2025 BRIX Templates | All Rights Reserved</h3>
+        <div className="column First-column">
+          <h3>Copyright 2025 BRIX Templates <br />
+           | All Rights Reserved</h3>
         </div>
-        <div className="second-column">
+        <div className="column second-column">
           <h3>Company</h3>
           <ul>
             <li>About</li>
@@ -290,7 +291,7 @@ const LandingPage = () => {
             <li>Blog</li>
           </ul>
         </div>
-        <div className="third-column">
+        <div className="column third-column">
           <h3>Support</h3>
           <ul>
             <li>Getting Started</li>
@@ -300,7 +301,7 @@ const LandingPage = () => {
             <li>Chat support</li>
           </ul>
         </div>
-        <div className="Fourth-column">
+        <div className="column Fourth-column">
           <h3>Follow us</h3>
           <ul>
             <li>Facebook</li>
@@ -310,6 +311,7 @@ const LandingPage = () => {
             <li>Youtube</li>
           </ul>
         </div>
+        <h4>Terms And Conditions | Privacy Policy</h4>
       </div>
     </div>
   );
