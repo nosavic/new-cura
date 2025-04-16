@@ -1,4 +1,4 @@
-.body{
+.bodybuilder{
     display: flex;
   justify-content: center;  
   align-items: center;       
@@ -9,7 +9,7 @@
 
 
 
-.container {
+.bigcontainer {
     background-color: white;
     width: 300px; 
     height: 450px;

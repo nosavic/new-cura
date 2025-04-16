@@ -6,6 +6,7 @@ import SignIn from "./components/forms/SignIn";
 import FindMeds from "./pages/FindMeds";
 import TransactionSuccess from "./pages/TransactionSuccess";
 import PaymentSuccess from "./pages/PaymentSuccess";
+import OtpPage from "./pages/OtpPage";
 
 import ProcessingPage from "./components/ProcessingPage";
 import PaymentModal from "./components/PaymentModal";
@@ -16,6 +17,9 @@ import SearchpageSummary from "./pages/SearchpageSummary";
 import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
+
+//Adding a new route for dashboard page
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
@@ -28,10 +32,12 @@ function App() {
       <Route path="" element={<FindMeds />} />
       <Route path="/transactionsuccess" element={<TransactionSuccess />} />
       <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+      <Route path="/otppage" element={<OtpPage/>} />
 
       <Route path="/processing" element={<ProcessingPage />} />
 
       <Route path="/paymentmodal" element={<PaymentModal />} />
+      <Route path="/dashboard" element={<Dashboard />} />
 
       <Route
         path="/findmeds"
