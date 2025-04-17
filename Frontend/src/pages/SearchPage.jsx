@@ -6,7 +6,7 @@ import MedicineCard from "../components/MedicineCard";
 import SearchpageSummary from "./SearchpageSummary";
 import "../styles/searchpage.css";
 import brandlogo from "../assets/brandlogo.svg";
-import avatar from "../assets/avatar.svg";
+import avatar from "../assets/Avatar.svg";
 
 const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
   const [searchTerm, setSearchTerm] = useState("");

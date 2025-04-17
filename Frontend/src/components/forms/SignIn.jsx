@@ -16,7 +16,7 @@ const SignIn = () => {
       <div className="login-box">
         <div className="back-btn">
           <a href="/">
-            <img src="/src/assets/CaretLeft.png" alt="" />
+            <img src="/src/assets/CaretLeft.png" alt="a left arrow icon" />
           </a>
         </div>
 
