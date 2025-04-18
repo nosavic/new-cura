@@ -183,18 +183,16 @@ body {
   border-bottom: 1px solid #080808;
 }
 
-
 .card-1-img-container {
   position: absolute;
   display: flex;
-  
+
   gap: 15em;
   border-radius: 3em;
   top: 0.5em;
   left: 1em;
-  max-width: 100%;  
+  max-width: 100%;
 }
-
 
 .card-container {
   display: flex;
@@ -272,7 +270,6 @@ body {
   flex-direction: column;
 }
 
-
 .name-pre h4,
 p {
   text-wrap: nowrap;
@@ -333,7 +330,6 @@ p {
   max-width: 500px;
   font-size: 14px;
 
-  
   overflow: hidden;
 }
 
@@ -362,17 +358,128 @@ p {
   text-wrap: wrap;
 }
 
-
 /* sixth levl content*/
-
 
 .sixth-level-content {
   display: flex;
+  flex-direction: column;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
 }
 
-.testimonial-card{
+.sixth-level-content h2 {
+  padding-top: 3em;
+  padding-left: 3em;
+}
+
+.card-con {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  height: 35rem;
+  flex-direction: column;
+  border-radius: 1em;
+  border: #007e85 solid 1px;
+}
+
+.patients-portal-card-img-container,
+.pharmacy-portal-card-img-container {
+  display: flex;
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+
+.patients-portal-card-text,
+.pharmacy-portal-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  text-wrap: wrap;
+}
+
+/* seventh level content */
+
+.seventh-level-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seventh-level-content h2 {
+  font-size: 29px;
+}
+
+.faq ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  list-style-type: none;
+  text-wrap: nowrap;
+}
+
+.faq ul li {
+  border: 1px solid #080808;
+  border-radius: 1.2em;
+  width: 60em;
+  height: 5em;
+  padding: 2em 2em;
+}
+
+
+/* eight level content  */
+
+.eight-level-content {
+  display: flex;
+  gap: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.column ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+list-style-type: none;
 }
 /* Responsive Design */
 

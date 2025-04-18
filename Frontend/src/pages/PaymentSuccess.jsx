@@ -6,7 +6,7 @@ function PaymentSuccess (){
 
     return(
         <>
-        <section className="body">
+        <section className="bodybuilder">
   <section className="divhouse">
 <div className="divorder">
     <p className="paymentSuccessful">Payment Successfull</p>

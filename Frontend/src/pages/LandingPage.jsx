@@ -222,26 +222,97 @@ const LandingPage = () => {
       </div>
 
       <div className="sixth-level-content">
-<h2>Get Started with Curamap</h2>
+        <h2>Get Started with Curamap</h2>
 
-<div className="portal portal-for-patients">
-  <button>For Patients</button>
-  <div>
-<img src="./src/assets/forpatients.svg" alt="" />
-  </div>
-  <button>Sign up</button>
-</div>
+        <div className="cards-container">
+          <div className="card-con">
+            <span className="heading">For Patients</span>
+            <div className="portal portal-for-patients">
+              <div className="patients-portal-card">
+                <div className="patients-portal-card-img-container">
+                  <img src="./src/assets/forpatients.svg" alt="" />
+                </div>
+                <div className="patients-portal-card-text">
+                  <h3>Easy Access to Medications</h3>
+                  <p>
+                    Order your Medication and Healthcare Solutions With Ease
+                  </p>
+                  <button>Sign up</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div className="portal portal-for-pharmacy">
-  <button>For Pharmacies</button>
-  <div>
-<img src="./src/assets/phamacare.svg" alt="" />
-  </div>
-  <button>Sign up</button>
-</div>
+          <div className="card-con">
+            <span className="heading">For Pharmacies</span>
+            <div className="portal portal-for-pharmacy">
+              <div className="pharmacy-portal-card">
+                <div children="pharmacy-portal-card-img-container">
+                  <img src="./src/assets/phamacare.svg" alt="" />
+                </div>
+                <div className="pharmacy-portal-card-text">
+                  <h3>Pharmaceutical Care</h3>
+                  <p>
+                    Transforming Nigerian Pharmaceutical <br />
+                    Healthcare Through Enhanced Pharmacy Fulfillment
+                  </p>
+                  <button>Sign up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      
+      <div className="seventh-level-content">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq">
+          <ul>
+            <li>What does Curamap do</li>
+            <li>How does Curamap Measure The Quality of its Service</li>
+            <li>Is my Data safe and confidential</li>
+            <li>can i order drugs for someone else ?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="eight-level-content">
+        <div className="column First-column">
+          <h3>Copyright 2025 BRIX Templates <br />
+           | All Rights Reserved</h3>
+        </div>
+        <div className="column second-column">
+          <h3>Company</h3>
+          <ul>
+            <li>About</li>
+            <li>Contact us</li>
+            <li>Careers</li>
+            <li>Culture</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div className="column third-column">
+          <h3>Support</h3>
+          <ul>
+            <li>Getting Started</li>
+            <li>Help center</li>
+            <li>Server Status</li>
+            <li>Report a Bug</li>
+            <li>Chat support</li>
+          </ul>
+        </div>
+        <div className="column Fourth-column">
+          <h3>Follow us</h3>
+          <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>Linkdel</li>
+            <li>Youtube</li>
+          </ul>
+        </div>
+        <h4>Terms And Conditions | Privacy Policy</h4>
+      </div>
     </div>
   );
 };

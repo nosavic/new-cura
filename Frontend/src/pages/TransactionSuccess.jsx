@@ -8,8 +8,8 @@ function TransactionSuccess() {
 
     return(
   <>
-  <section className="body">
-   <section className="container">
+  <section className="bodybuilder">
+   <section className="bigcontainer">
     
       <div className="transfer">
       <img src={myImage} alt="transaction icon" />
