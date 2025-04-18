@@ -1,7 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
-import VendorData from "../data/VendorData.json";
+import VendorData from "../data/vendorData.json";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
