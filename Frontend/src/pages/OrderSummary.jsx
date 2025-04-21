@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/updatedcart.css";
 import brandlogo from "../assets/brandlogo.svg";
 
-const UpdatedCart = () => {
+const OrderSummary = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
   const selectedMedicines = state?.selectedMedicines || [];
@@ -13,7 +13,7 @@ const UpdatedCart = () => {
   // Calculate total price
 
   const continueShopping = () => navigate("/findmeds");
-  const proceedToCheckout = () => navigate("/checkout");
+  const proceedToCheckout = () => navigate("/payment-modal");
 
   const subtotal = selectedMedicines.reduce((acc, medicine) => {
     const { price, quantity } = medicine;
@@ -154,7 +154,7 @@ const UpdatedCart = () => {
               className="checkout-btn"
               disabled={medicineCount === 0}
             >
-              Proceed to Checkout
+              Get Meds
             </button>
           </div>
         </div>
@@ -163,4 +163,4 @@ const UpdatedCart = () => {
   );
 };
 
-export default UpdatedCart;
+export default OrderSummary;
