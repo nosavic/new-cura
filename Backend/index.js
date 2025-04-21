@@ -15,11 +15,16 @@ app.use(cookieParser()); // <-- Add cookie-parser middleware
 
 // Configure CORS options
 const corsOptions = {
-  origin: process.env.ALLOWED_ORIGIN || "http://localhost:3000",
+  origin: "*", // Allow all origins
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // Allow cookies to be sent/received
   optionsSuccessStatus: 200,
 };
+// const corsOptions = {
+//   origin: process.env.ALLOWED_ORIGIN || "http://localhost:3000",
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   credentials: true,
+//   optionsSuccessStatus: 200,
+// };
 
 app.use(cors(corsOptions));
 
