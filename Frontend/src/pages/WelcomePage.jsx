@@ -1,6 +1,7 @@
 import React from "react";
 import WelcomeInput from "../components/forms/WelcomeInput";
 import "../styles/welcomepage.css";
+import curamapLogo from "../assets/LogoSvg.svg"
 
 const WelcomePage = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +9,7 @@ const WelcomePage = () => {
   return (
     <div className="container">
       <div className="logo">
-        <img src="../assets/LogoSvg.svg" alt="Curamap Logo" />
+        <img src={curamapLogo} alt="Curamap Logo" />
       </div>
       <div className="content">
         <h2>Hello...</h2>
