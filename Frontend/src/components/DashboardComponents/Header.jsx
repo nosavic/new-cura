@@ -1,4 +1,5 @@
 import React from "react";
+import avatar from "/src/assets/Avatar.svg" 
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
           <span className="slider round"></span>
         </label>
         <img
-          src="./src/assets/Avatar.svg"
+          src={avatar}
           alt="User"
           className="profile-img"
         />

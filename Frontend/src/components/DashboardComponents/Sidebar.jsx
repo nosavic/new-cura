@@ -1,10 +1,11 @@
 import React from "react";
+import logoSymbol from "/src/assets/LogoSymbol.svg"
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="logo">
-        <img src="./src/assets/LogoSymbol.svg" alt="logo symbol" />
+        <img src={logoSymbol} alt="logo symbol" />
         <h4>Curamap</h4>
       </div>
       <nav>
