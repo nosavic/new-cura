@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../styles/findmeds.css";
+import brandlogo from "/src/assets/brandlogo.svg"
+import avatar from "/src/assets/Avatar.svg"
+import searchVector from "/src/assets/search-vector.svg"
 
 const FindMeds = () => {
   const [count, setCount] = useState(0);
@@ -42,13 +45,13 @@ const FindMeds = () => {
         <header>
           <img
             className="brandlogo"
-            src="/src/assets/brandlogo.svg"
+            src={brandlogo}
             alt="The Curamap Brand Logo"
           />
 
           <img
             className="avatar"
-            src="/src/assets/Avatar.svg"
+            src={avatar}
             alt="An avatar for user profiles "
           />
         </header>
@@ -59,7 +62,7 @@ const FindMeds = () => {
             id="searchInput"
             placeholder="Search Medications"
           />
-          <img src="/src/assets/search-vector.svg" alt="An addition Icon" />
+          <img src={searchVector} alt="An addition Icon" />
         </div>
 
         <div className="med-container">

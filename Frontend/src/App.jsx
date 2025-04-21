@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import SignUp from "./components/forms/SignUp";
 import SignIn from "./components/forms/SignIn";
+import Newsignup from "./components/forms/Newsignup";
 
-import FindMeds from "./pages/FindMeds";
+
 import TransactionSuccess from "./pages/TransactionSuccess";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import OtpPage from "./pages/OtpPage";
@@ -17,19 +17,17 @@ import SearchpageSummary from "./pages/SearchpageSummary";
 import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
-
-//Adding a new route for dashboard page
 import Dashboard from "./pages/Dashboard";
+
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signup" element={<Newsignup />} />
       <Route path="/signin" element={<SignIn />} />
 
-      <Route path="" element={<FindMeds />} />
       <Route path="/transactionsuccess" element={<TransactionSuccess />} />
       <Route path="/paymentsuccess" element={<PaymentSuccess />} />
       <Route path="/otppage" element={<OtpPage/>} />
@@ -38,6 +36,7 @@ function App() {
 
       <Route path="/paymentmodal" element={<PaymentModal />} />
       <Route path="/dashboard" element={<Dashboard />} />
+
 
       <Route
         path="/findmeds"
@@ -48,6 +47,8 @@ function App() {
           />
         }
       />
+
+
       <Route
         path="/search-summary"
         element={
@@ -58,6 +59,7 @@ function App() {
         }
       />
       <Route path="/updatedcart" element={<UpdatedCart />} />
+
       <Route path="/complete-profile" element={<ProfileSignup />} />
     </Routes>
   );

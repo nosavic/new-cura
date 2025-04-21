@@ -101,8 +101,8 @@ body {
   max-width: 100%;
 }
 .MainContent img:nth-child(2) {
-  max-width: 100%;
-  width: 550px;
+  max-width: 550px;
+  width: 100%;
   height: auto;
 }
 
