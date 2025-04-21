@@ -15,4 +15,7 @@ router.delete("/:id", patientController.deletePatient);
 // Toggle pharmacy open/close status
 router.patch("/:id/toggle-status", patientController.togglePatientStatus);
 
+//forgot and reset password routes
+router.post("/forgot-password", patientController.forgotPassword);
+router.patch("/reset-password/:token", patientController.resetPassword);
 module.exports = router;

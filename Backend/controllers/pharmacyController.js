@@ -2,6 +2,8 @@ const Pharmacy = require("../models/PharmacyModel");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const dotenv = require("dotenv");
+const sendEmail = require("../utils/email");
+const crypto = require("crypto");
 
 dotenv.config(); // Load environment variables
 
@@ -164,3 +166,77 @@ exports.toggleClosingStatus = async (req, res) => {
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
+
+// @desc post pharmacy Forgot password
+// @route POST /api/pharmacies/forgot-password
+exports.forgotPassword = async (req, res) => {
+  const pharmacy = await pharmacy.findOne({ email: req.body.email.trim().toLowerCase() });
+  if (!pharmacy) {
+    return res.status(404).json({ message: "Pharmacy not found" });
+  }
+  // Generate a reset token
+  const resetToken = pharmacy.generatePasswordResetToken();
+  await pharmacy.save({ validateBeforeSave: false });
+  // Send email with reset token
+  const resetURL = `${req.protocol}://${req.get(
+    "host"
+  )}/api/pharmacy/reset-password/${resetToken}`;
+  const message = `A password reset request was received. Click the link below to reset your password:\n${resetURL}\n\nThis link is valid for 10 minutes. If you did not request this, please ignore this email.`;
+
+  // Send email
+  try {
+    await sendEmail({
+      email: pharmacy.email,
+      subject: "Password Reset Link",
+      message,
+    });
+    res.status(200).json({
+      message: `Password reset link sent to ${pharmacy.email}`,
+    });
+  } catch (err) {
+    pharmacy.passwordResetToken = undefined;
+    pharmacy.passwordResetExpires = undefined;
+    await pharmacy.save({ validateBeforeSave: false });
+    return res.status(500).json({
+      message: "Error sending email. Please try again later.",
+    });
+  }
+}
+
+
+// @desc patch pharmacy reset password
+// @route PATCH /api/pharmacies/reset-password/:token
+
+exports.resetPassword = async (req, res) => {
+  const hashedToken = crypto
+    .createHash("sha256")
+    .update(req.params.token)
+    .digest("hex");
+
+  try {
+    const pharmacy = await Pharmacy.findOne({
+      passwordResetToken: hashedToken,
+      passwordResetExpires: { $gt: Date.now() },
+    });
+  
+    if (!pharmacy) {
+      return res.status(400).json({ message: "Invalid or expired token" });
+    }
+  
+    pharmacy.password = req.body.password;
+    pharmacy.passwordResetToken = undefined;
+    pharmacy.passwordResetExpires = undefined;
+  
+    await pharmacy.save();
+  
+    res.status(200).json({ message: "Password reset successful" });
+    //login pharmacy
+    const loginToken = generateToken(pharmacy);
+    res.status(200).json({
+      message: "Password reset successful",
+      token: loginToken,
+    });
+  } catch (err) {
+    res.status(500).json({message: "Server error", error: err.message });
+  }
+}

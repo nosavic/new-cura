@@ -18,6 +18,9 @@ const pharmacySchema = new mongoose.Schema(
     website: { type: String }, // Optional website
     licenseNumber: { type: String, required: true, unique: true }, // Regulatory License Number
     password: { type: String, required: true },
+    passwordChangeAt: { type: Date },
+    passwordResetToken: { type: String },
+    passwordResetExpires: { type: Date },
     role: {
       type: String,
       enum: ["admin", "pharmacist", "assistant"],
@@ -50,6 +53,18 @@ pharmacySchema.pre("save", async function (next) {
 // Password comparison method
 pharmacySchema.methods.comparePassword = async function (password) {
   return bcrypt.compare(password, this.password);
+};
+
+// Password reset token generation
+pharmacySchema.methods.generatePasswordResetToken = function () {
+  const resetToken = crypto.randomBytes(32).toString("hex");
+  // Hashing the token for protection
+  this.passwordResetToken = crypto.createHash("sha256").update(resetToken).digest("hex");
+
+  // Set the expiration time for the token
+  this.passwordResetExpires = Date.now() + 10 * 60 * 1000; // 10 minutes expiration
+
+  return resetToken;
 };
 
 module.exports = mongoose.model("Pharmacy", pharmacySchema);
