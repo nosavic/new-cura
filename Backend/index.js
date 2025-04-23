@@ -14,17 +14,16 @@ app.use(express.json());
 app.use(cookieParser()); // <-- Add cookie-parser middleware
 
 // Configure CORS options
+
 const corsOptions = {
-  origin: "*", // Allow all origins
+  origin: [
+    process.env.ALLOWED_ORIGIN || "http://localhost:3000",
+    "http://localhost:5173",
+  ],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
   optionsSuccessStatus: 200,
 };
-// const corsOptions = {
-//   origin: process.env.ALLOWED_ORIGIN || "http://localhost:3000",
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   credentials: true,
-//   optionsSuccessStatus: 200,
-// };
 
 app.use(cors(corsOptions));
 
