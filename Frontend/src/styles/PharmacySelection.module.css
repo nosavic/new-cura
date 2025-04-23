@@ -23,8 +23,16 @@
 }
 
 .container {
-  max-width: 48rem;
+  background-color: #fff;
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 4rem;
+  padding-block: 2rem;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .header {
@@ -42,12 +50,16 @@
 
 .backButton {
   padding: var(--spacing-2) var(--spacing-4);
-  color: var(--color-primary);
+  color: #399b90;
   background: none;
+  border: 1px solid #399b90;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .backButton:hover {
-  color: var(--color-primary-dark);
+  background-color: #399b90;
+  color: #fff;
 }
 
 .pharmacyList {
