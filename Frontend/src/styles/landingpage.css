@@ -385,8 +385,12 @@ p {
 }
 
 .card-6{
-  padding-top: 11em;
+  padding-top: 13.5em;
   padding-left: 6.5em;
+}
+
+.card-6 p{
+margin-bottom: 4em;
 }
 /* sixth levl content*/
 

@@ -17,6 +17,7 @@ import clientPicTwo from "/src/assets/clientpic2.svg";
 import clientPicThree from "/src/assets/clientpic3.svg";
 import forPatients from "/src/assets/forpatients.svg";
 import pharmaCare from "/src/assets/phamacare.svg";
+import colorbuttons from "/src/assets/colorbuttons.svg"
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -238,6 +239,8 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
+
+        <div className="colorbuttons-container"> <img src={colorbuttons} alt="color buttons" /></div>
       </div>
 
       <div className="sixth-level-content">
