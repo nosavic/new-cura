@@ -10,6 +10,11 @@ const Newsignup = () => {
     year: "",
   });
 
+  const [phone, setPhone] = useState("");
+  // const [code, setCode] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -21,6 +26,55 @@ const Newsignup = () => {
       [name]: numericValue,
     }));
   };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  // const handleCodeChange = (e) => {
+  //   setCode(e.target.value);
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const payload = {
+      dateOfBirth: `${date.year}-${date.month}-${date.day}`,
+      phone,
+      // code,
+    };
+    console.log("Payload being sent:", payload);
+    try {
+      const response = await fetch(
+        "https://new-cura.onrender.com/api/patients/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      console.log("Response:", response);
+
+      if (!response.ok) {
+        throw new Error("Failed to sign up. Please try again.");
+      }
+
+      const data = await response.json();
+      console.log("Signup successful:", data);
+      alert("Signup successful!");
+    } catch (err) {
+      console.error("Error details:", err);
+      setError(err.message || "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="main">
       <section>
@@ -31,7 +85,7 @@ const Newsignup = () => {
           </div>
           <div className="signup">
             <h1 className="title">Sign Up</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="birthday-input">
                 <p>When is your date of birth?</p>
                 <div className="date-inputs">
@@ -84,24 +138,34 @@ const Newsignup = () => {
                   Your birthday won't be shown publicly.
                 </p>
               </div>
-              {/* input for phone number */}
               <div className="signup-methods">
                 <p className="phone">Phone</p>
                 <p className="email">Sign up with email</p>
               </div>
               <div className="phone-input">
                 <span>+234</span>
-                <input type="tel" placeholder="801 234 5678" required />
+                <input
+                  type="tel"
+                  placeholder="801 234 5678"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  required
+                />
               </div>
-              {/* input for confirmation code */}
-              <div className="code-input">
-                <input type="text" placeholder="Enter 6 digit code" required />
-                <button>Send code</button>
-              </div>
-              {/* code for button */}
-              <button className="button" type="submit">
-                Next
+              {/* <div className="code-input">
+                <input
+                  type="text"
+                  placeholder="Enter 6 digit code"
+                  value={code}
+                  onChange={handleCodeChange}
+                  required
+                />
+                <button type="button">Send code</button>
+              </div> */}
+              <button className="button" type="submit" disabled={loading}>
+                {loading ? "Submitting..." : "Next"}
               </button>
+              {error && <p className="error">{error}</p>}
               <footer>
                 <p>
                   Already have an account? <span className="login">Log in</span>
