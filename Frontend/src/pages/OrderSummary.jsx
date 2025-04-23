@@ -1,19 +1,22 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import "../styles/updatedcart.css";
+import "../styles/order-summary.css";
 import brandlogo from "../assets/brandlogo.svg";
 
 const OrderSummary = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
   const selectedMedicines = state?.selectedMedicines || [];
+  const pharmacy = state?.pharmacy || []; // Default value if not provided
 
   // Calculate medicine count
   const medicineCount = selectedMedicines.length;
 
   // Calculate total price
 
-  const continueShopping = () => navigate("/findmeds");
-  const proceedToCheckout = () => navigate("/payment-modal");
+  const backToSelection = () =>
+    navigate("/findmeds", { state: { selectedMedicines } });
+  const proceedToCheckout = () =>
+    navigate("/payment-modal", { state: { selectedMedicines, pharmacy } });
 
   const subtotal = selectedMedicines.reduce((acc, medicine) => {
     const { price, quantity } = medicine;
@@ -66,7 +69,7 @@ const OrderSummary = () => {
         </div>
         <p className="secure">100% Secure</p>
       </div>
-      <div className="cont-shopping" onClick={continueShopping}>
+      <div className="cont-shopping" onClick={backToSelection}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -82,8 +85,8 @@ const OrderSummary = () => {
           />
         </svg>
 
-        <button onClick={continueShopping} className="cont-btn">
-          Continue Shopping
+        <button onClick={backToSelection} className="cont-btn">
+          Back to Selection
         </button>
       </div>
 

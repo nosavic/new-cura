@@ -17,15 +17,13 @@ import OrderSummary from "./pages/OrderSummary";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 import Dashboard from "./pages/Dashboard";
-<<<<<<< HEAD
-import PharmacyList from "./pages/PharmacyList";
-=======
 import FindMedsLoading from "./components/FindMedsLoading";
-import PharamacySelection from "./pages/PharmacySelection";
->>>>>>> upstream/development
+import PharmacySelection from "./pages/PharmacySelection";
+import UpdatedCart from "./pages/UpdatedCart";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
+  const [pharmacy, setPharmacy] = useState([]);
   return (
     <Routes>
       {/* Patients Routing */}
@@ -34,16 +32,6 @@ function App() {
       <Route path="/signup-email" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
 
-<<<<<<< HEAD
-      <Route path="/transactionsuccess" element={<TransactionSuccess />} />
-      <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-      <Route path="/otppage" element={<OtpPage />} />
-
-      <Route path="/processing" element={<ProcessingPage />} />
-
-      <Route path="/paymentmodal" element={<PaymentModal />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-=======
       <Route path="/transaction-success" element={<TransactionSuccess />} />
       <Route path="/payment-success" element={<PaymentSuccess />} />
       <Route path="/otp-page" element={<OtpPage />} />
@@ -51,7 +39,6 @@ function App() {
       <Route path="/processing" element={<ProcessingPage />} />
 
       <Route path="/payment-modal" element={<PaymentModal />} />
->>>>>>> upstream/development
 
       <Route
         path="/findmeds"
@@ -62,14 +49,6 @@ function App() {
           />
         }
       />
-
-<<<<<<< HEAD
-=======
-      <Route path="/findmeds-loading" element={<FindMedsLoading />} />
-
-      <Route path="/pharmacy-selection" element={<PharamacySelection />} />
-
->>>>>>> upstream/development
       <Route
         path="/search-summary"
         element={
@@ -79,21 +58,44 @@ function App() {
           />
         }
       />
-<<<<<<< HEAD
+
+      <Route path="/findmeds-loading" element={<FindMedsLoading />} />
+
       <Route
-        path="/pharmacyselection"
+        path="/pharmacy-selection"
         element={
-          <PharmacyList
+          <PharmacySelection
             selectedMedicines={selectedMedicines}
             setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
           />
         }
       />
-      <Route path="/updatedcart" element={<UpdatedCart />} />
-=======
 
-      <Route path="/order-summary" element={<OrderSummary />} />
->>>>>>> upstream/development
+      <Route
+        path="/updated-cart"
+        element={
+          <UpdatedCart
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
+          />
+        }
+      />
+
+      <Route
+        path="/order-summary"
+        element={
+          <OrderSummary
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
+          />
+        }
+      />
 
       <Route path="/complete-profile" element={<ProfileSignup />} />
 
