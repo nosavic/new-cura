@@ -274,6 +274,23 @@ body {
 p {
   text-wrap: nowrap;
 }
+
+.card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-3 h3 {
+  font-size: 2em;
+}
+
+.card-3 img {
+  height: 20em;
+}
+
 .Drug-price p {
   text-wrap: nowrap;
 }
@@ -327,9 +344,9 @@ p {
   height: 20rem;
   border-radius: 1em;
   padding: 10rem;
+  padding-left: 5em;
   max-width: 500px;
   font-size: 14px;
-
   overflow: hidden;
 }
 
@@ -351,6 +368,15 @@ p {
   height: 26rem;
 }
 
+.card-4{
+  padding-top: 9em;
+  padding-left: 6em;
+}
+
+.card-5{
+  padding-top: 4.5em;
+}
+
 .image-container {
   width: 150px;
 }
@@ -358,6 +384,10 @@ p {
   text-wrap: wrap;
 }
 
+.card-6{
+  padding-top: 11em;
+  padding-left: 6.5em;
+}
 /* sixth levl content*/
 
 .sixth-level-content {
@@ -425,6 +455,14 @@ p {
   text-wrap: wrap;
 }
 
+.portal button {
+  padding: 0.6em 1em;
+  background: #f0f7ff;
+  border: 0.1em solid;
+  border-color: #007e85;
+  border-radius: 0.3em;
+}
+
 /* seventh level content */
 
 .seventh-level-content {
@@ -456,7 +494,6 @@ p {
   padding: 2em 2em;
 }
 
-
 /* eight level content  */
 
 .eight-level-content {
@@ -470,16 +507,16 @@ p {
   border-bottom: 1px solid #080808;
 }
 
-.column{
+.column {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
 }
-.column ul{
+.column ul {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
-list-style-type: none;
+  list-style-type: none;
 }
 /* Responsive Design */
 

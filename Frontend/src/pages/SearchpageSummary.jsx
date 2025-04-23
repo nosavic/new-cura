@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/searchsummary.css";
-import UpdatedCart from "./UpdatedCart";
+import OrderSummary from "./OrderSummary";
 
 const SearchpageSummary = () => {
   const navigate = useNavigate();
@@ -21,8 +21,13 @@ const SearchpageSummary = () => {
   //   // For now, we'll just show an alert
   //   alert(`Continue shopping cart with ${medicineCount} medicines`);
 
+<<<<<<< HEAD
   //   navigate("/pharmacyfinder", { state: { selectedMedicines } });
   // };
+=======
+    navigate("/order-summary", { state: { selectedMedicines } });
+  };
+>>>>>>> upstream/development
 
   return (
     <div className="summary-container">

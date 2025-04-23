@@ -8,15 +8,15 @@ import banner from "/src/assets/BannerPicture.svg";
 import vector from "/src/assets/vector.svg";
 import padlock from "/src/assets/padlock.svg";
 import heartImage from "/src/assets/Thirdlevelimg.svg";
-import tablets from "/src/assets/card-1-img.svg"
-import tabletImage from "/src/assets/card-2-img.svg"
-import contactChannel from "/src/assets/contactchannels.svg"
-import tabletImageThree from "/src/assets/card-3-img.svg"
-import clientPic from "/src/assets/clientpic1.svg"
-import clientPicTwo from "/src/assets/clientpic2.svg"
-import clientPicThree from "/src/assets/clientpic3.svg"
-import forPatients from "/src/assets/forpatients.svg"
-import pharmaCare from "/src/assets/phamacare.svg"
+import tablets from "/src/assets/card-1-img.svg";
+import tabletImage from "/src/assets/card-2-img.svg";
+import contactChannel from "/src/assets/contactchannels.svg";
+import tabletImageThree from "/src/assets/card-3-img.svg";
+import clientPic from "/src/assets/clientpic1.svg";
+import clientPicTwo from "/src/assets/clientpic2.svg";
+import clientPicThree from "/src/assets/clientpic3.svg";
+import forPatients from "/src/assets/forpatients.svg";
+import pharmaCare from "/src/assets/phamacare.svg";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -152,7 +152,10 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="card card-3">
-            {" "}
+            <h3>
+              Your Medication
+              <br /> is Ready For Pick-up
+            </h3>{" "}
             <div className="card-3-img-container">
               <img src={tabletImageThree} alt="Tablets image" />
             </div>
@@ -196,7 +199,7 @@ const LandingPage = () => {
               <h3>Wale</h3>
             </div>
             <p>
-              curamaphas completely Transformed how i managemy prescription.As
+              curamap has completely Transformed how i managemy prescription.As
               someone With a Hectic Schedule, The One-click Delivery Option is a
               Game-Changer.My Meds Arrive Quickly
             </p>
@@ -272,7 +275,7 @@ const LandingPage = () => {
                     Transforming Nigerian Pharmaceutical <br />
                     Healthcare Through Enhanced Pharmacy Fulfillment
                   </p>
-                  <button>Sign up</button>
+                  <button>Partner with us</button>
                 </div>
               </div>
             </div>
