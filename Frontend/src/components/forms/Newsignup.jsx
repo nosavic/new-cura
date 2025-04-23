@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import X from "../../assets/X.png";
 import back from "../../assets/CaretLeft.png";
-import "../../styles/newsignup.css";
+import styles from "../../styles/newsignup.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Newsignup = () => {
+  const navigate = useNavigate();
+
+  const handleEmail = () => {
+    navigate("/signup-email");
+  };
+
+  const handleLogin = () => {
+    navigate("/signin");
+  };
+
   const [date, setDate] = useState({
     month: "",
     day: "",
@@ -76,21 +87,21 @@ const Newsignup = () => {
   };
 
   return (
-    <div className="main">
-      <section>
-        <div className="white">
-          <div className="backX">
+    <div className={styles.main}>
+      <section className={styles.container}>
+        <div className={styles.white}>
+          <div className={styles.backX}>
             <img src={back} alt="go back" />
             <img src={X} alt="close" />
           </div>
-          <div className="signup">
-            <h1 className="title">Sign Up</h1>
+          <div className={styles.signup}>
+            <h1 className={styles.title}>Sign Up</h1>
             <form onSubmit={handleSubmit}>
-              <div className="birthday-input">
+              <div className={styles.birthdayInput}>
                 <p>When is your date of birth?</p>
-                <div className="date-inputs">
+                <div className={styles.dateInputs}>
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="month"
                     name="month"
@@ -104,7 +115,7 @@ const Newsignup = () => {
                     required
                   />
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="day"
                     name="day"
@@ -119,7 +130,7 @@ const Newsignup = () => {
                     required
                   />
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="year"
                     name="year"
@@ -134,15 +145,17 @@ const Newsignup = () => {
                     required
                   />
                 </div>
-                <p className="disclaimer">
+                <p className={styles.disclaimer}>
                   Your birthday won't be shown publicly.
                 </p>
               </div>
-              <div className="signup-methods">
-                <p className="phone">Phone</p>
-                <p className="email">Sign up with email</p>
+              <div className={styles.signupMethods}>
+                <p className={styles.phone}>Phone</p>
+                <p className={styles.email} onClick={handleEmail}>
+                  Sign up with email
+                </p>
               </div>
-              <div className="phone-input">
+              <div className={styles.phoneInput}>
                 <span>+234</span>
                 <input
                   type="tel"
@@ -162,13 +175,20 @@ const Newsignup = () => {
                 />
                 <button type="button">Send code</button>
               </div> */}
-              <button className="button" type="submit" disabled={loading}>
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={loading}
+              >
                 {loading ? "Submitting..." : "Next"}
               </button>
-              {error && <p className="error">{error}</p>}
+              {error && <p className={styles.error}>{error}</p>}
               <footer>
                 <p>
-                  Already have an account? <span className="login">Log in</span>
+                  Already have an account?{" "}
+                  <span className={styles.login} onClick={handleLogin}>
+                    Log in
+                  </span>
                 </p>
               </footer>
             </form>

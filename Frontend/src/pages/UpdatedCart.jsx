@@ -26,18 +26,19 @@ const UpdatedCart = () => {
         <div className={styles.cardBtn}>
           <button
             onClick={() =>
-              navigate("/findmeds", { state: { selectedMedicines } })
+              navigate("/order-summary", {
+                state: { selectedMedicines, pharmacy },
+              })
             }
             disabled={selectedMedicines.length === 0}
             className={styles.shoppingCartBtn}
           >
             View Shopping Cart
           </button>
+
           <button
             onClick={() =>
-              navigate("/order-summary", {
-                state: { selectedMedicines, pharmacy },
-              })
+              navigate("/findmeds", { state: { selectedMedicines } })
             }
             disabled={selectedMedicines.length === 0}
             className={styles.continueBtn}
