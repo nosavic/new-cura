@@ -191,7 +191,7 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
           className="submit-btn"
           disabled={selectedMedicines.length === 0}
         >
-          Find Med
+          Find ({selectedMedicines.length}) Med
         </button>
       </footer>
     </div>

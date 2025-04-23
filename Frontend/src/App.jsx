@@ -3,7 +3,6 @@ import LandingPage from "./pages/LandingPage";
 import SignIn from "./components/forms/SignIn";
 import Newsignup from "./components/forms/Newsignup";
 
-
 import TransactionSuccess from "./pages/TransactionSuccess";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import OtpPage from "./pages/OtpPage";
@@ -18,7 +17,7 @@ import UpdatedCart from "./pages/UpdatedCart";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 import Dashboard from "./pages/Dashboard";
-
+import PharmacyList from "./pages/PharmacyList";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
@@ -30,13 +29,12 @@ function App() {
 
       <Route path="/transactionsuccess" element={<TransactionSuccess />} />
       <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-      <Route path="/otppage" element={<OtpPage/>} />
+      <Route path="/otppage" element={<OtpPage />} />
 
       <Route path="/processing" element={<ProcessingPage />} />
 
       <Route path="/paymentmodal" element={<PaymentModal />} />
       <Route path="/dashboard" element={<Dashboard />} />
-
 
       <Route
         path="/findmeds"
@@ -48,11 +46,19 @@ function App() {
         }
       />
 
-
       <Route
         path="/search-summary"
         element={
           <SearchpageSummary
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+          />
+        }
+      />
+      <Route
+        path="/pharmacyselection"
+        element={
+          <PharmacyList
             selectedMedicines={selectedMedicines}
             setSelectedMedicines={setSelectedMedicines}
           />

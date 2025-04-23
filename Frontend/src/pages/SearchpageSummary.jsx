@@ -17,12 +17,12 @@ const SearchpageSummary = () => {
     navigate("/findmeds");
   };
 
-  const continueShopping = () => {
-    // For now, we'll just show an alert
-    alert(`Continue shopping cart with ${medicineCount} medicines`);
+  // const continueShopping = () => {
+  //   // For now, we'll just show an alert
+  //   alert(`Continue shopping cart with ${medicineCount} medicines`);
 
-    navigate("/updatedcart", { state: { selectedMedicines } });
-  };
+  //   navigate("/pharmacyfinder", { state: { selectedMedicines } });
+  // };
 
   return (
     <div className="summary-container">
@@ -61,7 +61,10 @@ const SearchpageSummary = () => {
           </button>
 
           <button
-            onClick={continueShopping}
+            onClick={() =>
+              navigate("/pharmacyselection", { state: { selectedMedicines } })
+            }
+            disabled={selectedMedicines.length === 0}
             className="summary-btn continue-btn"
           >
             Continue Shopping
