@@ -3,7 +3,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import PharmacyCard from "../components/PharmacyCard";
 import { pharmacies } from "../script/medicine";
-import styles from "../styles/PharmacyList.module.css";
+import styles from "../styles/PharmacySelection.module.css";
 
 function PharmacySelection() {
   const navigate = useNavigate();

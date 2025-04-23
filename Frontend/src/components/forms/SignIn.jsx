@@ -1,12 +1,24 @@
-
 import React from "react";
 import { useState } from "react";
 import "../../styles/signin.css";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate("/signup-phone")
+  }
+
+  const handleProfile = () => {
+    navigate("/complete-profile")
+  }
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,17 +67,15 @@ const SignIn = () => {
             <a href="/forgot-password">Forgot password?</a>
           </div>
 
-          <button type="submit" className="sign-in-btn">
+          <button type="submit" className="sign-in-btn" onClick={handleProfile}>
             Sign in
           </button>
 
-          <button className="google-signin">
-            Or sign in with Google
-          </button>
+          <button className="google-signin">Or sign in with Google</button>
         </form>
 
         <p class="signup-text">
-          Don't have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <a href="#" onClick={handleSignUp}>Sign up</a>
         </p>
       </div>
     </div>
@@ -73,4 +83,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-

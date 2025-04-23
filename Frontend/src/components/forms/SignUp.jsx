@@ -1,7 +1,22 @@
 import React from "react";
 import "../../styles/signup.css";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  const handlePhone = () => {
+    navigate("/signup-phone");
+  };
+
+  const handleLogin = () => {
+    navigate("/signin");
+  };
+
+  const handleProfile = () => {
+    navigate("/complete-profile");
+  };
+
   return (
     <>
       <section className="signup-wrapper">
@@ -9,7 +24,7 @@ const SignUp = () => {
           <div className="action-btn">
             <div className="return">
               <a href="/">
-                <img src="/src/assets/CaretLeft.png" alt="" />
+                <img src="/src/assets/CaretLeft.png" alt="A left arrow icon" />
               </a>
             </div>
           </div>
@@ -58,7 +73,7 @@ const SignUp = () => {
             </fieldset>
             <div className="email-tag">
               <label htmlFor="email">Email</label>
-              <p>Sign up with Phone</p>
+              <p onClick={handlePhone}>Sign up with Phone</p>
             </div>
             <input
               type="email"
@@ -78,10 +93,12 @@ const SignUp = () => {
               name="otp"
               placeholder="Enter 6 digit code"
             />
-            <button type="submit">Next</button>
+            <button type="submit" onClick={handleProfile}>
+              Next
+            </button>
           </form>
           <p className="login-text">
-            Already have an account? <a href="/signin">Log in</a>
+            Already have an account? <span onClick={handleLogin}>Log in</span>
           </p>
         </section>
       </section>

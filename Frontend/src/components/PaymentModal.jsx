@@ -13,8 +13,11 @@ const PaymentModal = () => {
         <p className="amount">Pay 40,000</p>
 
         <div className="payment-options">
-        
-          <label className={`payment-option ${selectedMethod === "pharmacy" ? "selected" : ""}`}>
+          <label
+            className={`payment-option ${
+              selectedMethod === "pharmacy" ? "selected" : ""
+            }`}
+          >
             <input
               type="radio"
               name="payment"
@@ -22,15 +25,21 @@ const PaymentModal = () => {
               checked={selectedMethod === "pharmacy"}
               onChange={() => setSelectedMethod("pharmacy")}
             />
-            <span>  <FaHospital /> Pay at Pharmacy</span>
+            <span>
+              {" "}
+              <FaHospital /> Pay at Pharmacy
+            </span>
             <div className="actions">
               <a href="#">Set as default</a>
               <a href="#">Edit</a>
             </div>
           </label>
 
-          
-          <label className={`payment-option ${selectedMethod === "transfer" ? "selected" : ""}`}>
+          <label
+            className={`payment-option ${
+              selectedMethod === "transfer" ? "selected" : ""
+            }`}
+          >
             <input
               type="radio"
               name="payment"
@@ -38,7 +47,10 @@ const PaymentModal = () => {
               checked={selectedMethod === "transfer"}
               onChange={() => setSelectedMethod("transfer")}
             />
-            <span>     <FaMoneyBillWave />  Pay with Transfer</span>
+            <span>
+              {" "}
+              <FaMoneyBillWave /> Pay with Transfer
+            </span>
             <div className="actions">
               <a href="#">Set as default</a>
               <a href="#">Edit</a>
@@ -49,11 +61,18 @@ const PaymentModal = () => {
         {/* Buttons */}
         <div className="modal-buttons">
           <button className="cancel">Cancel Payment</button>
-          <button className="confirm">Confirm</button>
+          <button className="confirm">Confirm </button>
         </div>
 
         {/* Security Info */}
-        <p className="secured">   <FaLock />  <span> Secured by <strong> paystack</strong> </span></p>
+        <p className="secured">
+          {" "}
+          <FaLock />{" "}
+          <span>
+            {" "}
+            Secured by <strong> paystack</strong>{" "}
+          </span>
+        </p>
       </div>
     </div>
   );

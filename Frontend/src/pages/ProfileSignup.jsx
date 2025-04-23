@@ -1,6 +1,13 @@
 import "../styles/profile-signup.css";
+import { useNavigate } from "react-router-dom";
 
 const ProfileSignup = () => {
+  const navigate = useNavigate();
+
+  const handleMeds = () => {
+    navigate("/findmeds");
+  };
+
   return (
     <>
       <section className="profile-wrapper">
@@ -43,10 +50,12 @@ const ProfileSignup = () => {
 
             <div className="btn-box">
               <button className="skip-btn">Skip</button>
-              <button className="finish-btn">Finish</button>
+              <button className="finish-btn" onClick={handleMeds}>
+                Finish
+              </button>
             </div>
 
-            <button id="submitCta" type="submit">
+            <button id="submitCta" type="submit" onClick={handleMeds}>
               Sign Up
             </button>
           </form>

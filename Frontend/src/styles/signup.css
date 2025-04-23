@@ -256,7 +256,7 @@ button[type="submit"] {
 }
 
 .login-text {
-  > a {
+  > span {
     text-decoration: none;
     color: #83c0b9;
     cursor: pointer;
