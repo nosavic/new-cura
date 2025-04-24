@@ -1,0 +1,149 @@
+.pharm-profile-container {
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+}
+
+.pharm-profile-content {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.pharm-profile-card {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pharm-picture {
+  width: 100px;
+  border-radius: 50%;
+}
+.pharm-review-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.pharm-review-card .stars {
+  margin-top: 10px;
+  font-size: 20px;
+  display: flex;
+  gap: 4px;
+}
+
+.pharm-profile-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.pharm-profile-tabs button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pharm-profile-tabs .pharm-active {
+  background: #d2f4f1;
+  font-weight: bold;
+}
+.pharm-stars {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Sidebar */
+/*Sidebar Style*/
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #83c0b9, #34d399);
+  margin: 20px;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.sidebar .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.sidebar .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-list a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 8px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pharm-profile-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .pharm-profile-content {
+    padding: 20px;
+  }
+}
