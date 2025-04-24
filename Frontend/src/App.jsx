@@ -3,14 +3,11 @@ import LandingPage from "./pages/LandingPage";
 import SignIn from "./components/forms/SignIn";
 import SignUp from "./components/forms/SignUp";
 import Newsignup from "./components/forms/Newsignup";
-
 import TransactionSuccess from "./pages/TransactionSuccess";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import OtpPage from "./pages/OtpPage";
-
 import ProcessingPage from "./components/ProcessingPage";
 import PaymentModal from "./components/PaymentModal";
-
 import SearchPage from "./pages/SearchPage";
 import SearchpageSummary from "./pages/SearchpageSummary";
 import OrderSummary from "./pages/OrderSummary";
