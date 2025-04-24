@@ -14,6 +14,7 @@ import OrderSummary from "./pages/OrderSummary";
 import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 import Dashboard from "./pages/Dashboard";
+import PharmacistProfile from "./pages/PharmacistProfile";
 import FindMedsLoading from "./components/FindMedsLoading";
 import PharmacySelection from "./pages/PharmacySelection";
 import UpdatedCart from "./pages/UpdatedCart";
@@ -98,6 +99,8 @@ function App() {
 
       {/* Pharmacy Routing */}
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/pharmacist-profile" element={<PharmacistProfile />} />
+
     </Routes>
   );
 }

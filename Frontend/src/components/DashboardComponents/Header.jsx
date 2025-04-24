@@ -1,6 +1,7 @@
 import React from "react";
 import avatar from "/src/assets/Avatar.svg" 
 
+
 const Header = () => {
   return (
     <header className="dashboard-header">
