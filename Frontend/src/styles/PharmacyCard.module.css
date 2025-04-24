@@ -1,0 +1,157 @@
+/* src/styles/PharmacyCard.module.css */
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-background: #f3f4f6;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-600: #4b5563;
+  --color-gray-800: #1f2937;
+  --color-green-100: #dcfce7;
+  --color-green-600: #16a34a;
+  --color-red-100: #fee2e2;
+  --color-red-600: #dc2626;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --border-radius: 0.5rem;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.card {
+  background-color: transparent;
+  border: 1px solid #399B90;
+  border-radius: 10px;
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-4);
+}
+
+.info h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-gray-800);
+  margin: 0;
+}
+
+.address {
+  color: var(--color-gray-600);
+  margin: var(--spacing-1) 0;
+}
+
+.distance {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.status {
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.open {
+  color: var(--color-green-600);
+}
+
+.closed {
+  color: var(--color-red-600);
+}
+
+.hours {
+  color: var(--color-gray-600);
+}
+
+.medicineList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.medicineList h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.medicineItem {
+  display: block; /* Ensures each item is on its own line */
+  font-size: 0.875rem;
+}
+
+.medicineItemsContainer {
+  display: flex;
+  flex-direction: column; /* Ensures items are stacked in a column */
+  flex: 1; /* Allows the container to take up available space */
+}
+
+.medicineCount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns content to the right */
+  margin-left: var(--spacing-4); /* Adds spacing between the list and count */
+}
+
+.total {
+  text-align: right;
+  font-weight: 600;
+  margin-top: var(--spacing-3);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+}
+
+.acceptButton {
+  background-color: #83c0b9;
+  color: var(--color-white);
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.acceptButton:hover {
+  background-color: #2f605a;
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: #b74940;
+  padding: 5px 20px;
+  border: 1px solid #b74940;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background-color: var(--color-gray-300);
+}
+
+.statusMessage {
+  text-align: center;
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius);
+}
+
+.statusAccepted {
+  background-color: var(--color-green-100);
+  color: var(--color-green-600);
+}
+
+.statusCancelled {
+  background-color: var(--color-red-100);
+  color: var(--color-red-600);
+}

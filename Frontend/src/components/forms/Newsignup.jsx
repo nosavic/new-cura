@@ -1,14 +1,30 @@
 import React, { useState } from "react";
 import X from "../../assets/X.png";
 import back from "../../assets/CaretLeft.png";
-import "../../styles/newsignup.css";
+import styles from "../../styles/newsignup.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Newsignup = () => {
+  const navigate = useNavigate();
+
+  const handleEmail = () => {
+    navigate("/signup-email");
+  };
+
+  const handleLogin = () => {
+    navigate("/signin");
+  };
+
   const [date, setDate] = useState({
     month: "",
     day: "",
     year: "",
   });
+
+  const [phone, setPhone] = useState("");
+  // const [code, setCode] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,22 +37,71 @@ const Newsignup = () => {
       [name]: numericValue,
     }));
   };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  // const handleCodeChange = (e) => {
+  //   setCode(e.target.value);
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const payload = {
+      dateOfBirth: `${date.year}-${date.month}-${date.day}`,
+      phone,
+      // code,
+    };
+    console.log("Payload being sent:", payload);
+    try {
+      const response = await fetch(
+        "https://new-cura.onrender.com/api/patients/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      console.log("Response:", response);
+
+      if (!response.ok) {
+        throw new Error("Failed to sign up. Please try again.");
+      }
+
+      const data = await response.json();
+      console.log("Signup successful:", data);
+      alert("Signup successful!");
+    } catch (err) {
+      console.error("Error details:", err);
+      setError(err.message || "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="main">
-      <section>
-        <div className="white">
-          <div className="backX">
+    <div className={styles.main}>
+      <section className={styles.container}>
+        <div className={styles.white}>
+          <div className={styles.backX}>
             <img src={back} alt="go back" />
             <img src={X} alt="close" />
           </div>
-          <div className="signup">
-            <h1 className="title">Sign Up</h1>
-            <form>
-              <div className="birthday-input">
+          <div className={styles.signup}>
+            <h1 className={styles.title}>Sign Up</h1>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.birthdayInput}>
                 <p>When is your date of birth?</p>
-                <div className="date-inputs">
+                <div className={styles.dateInputs}>
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="month"
                     name="month"
@@ -50,7 +115,7 @@ const Newsignup = () => {
                     required
                   />
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="day"
                     name="day"
@@ -65,7 +130,7 @@ const Newsignup = () => {
                     required
                   />
                   <input
-                    className="dob"
+                    className={styles.dob}
                     type="text"
                     id="year"
                     name="year"
@@ -80,31 +145,50 @@ const Newsignup = () => {
                     required
                   />
                 </div>
-                <p className="disclaimer">
+                <p className={styles.disclaimer}>
                   Your birthday won't be shown publicly.
                 </p>
               </div>
-              {/* input for phone number */}
-              <div className="signup-methods">
-                <p className="phone">Phone</p>
-                <p className="email">Sign up with email</p>
+              <div className={styles.signupMethods}>
+                <p className={styles.phone}>Phone</p>
+                <p className={styles.email} onClick={handleEmail}>
+                  Sign up with email
+                </p>
               </div>
-              <div className="phone-input">
+              <div className={styles.phoneInput}>
                 <span>+234</span>
-                <input type="tel" placeholder="801 234 5678" required />
+                <input
+                  type="tel"
+                  placeholder="801 234 5678"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  required
+                />
               </div>
-              {/* input for confirmation code */}
-              <div className="code-input">
-                <input type="text" placeholder="Enter 6 digit code" required />
-                <button>Send code</button>
-              </div>
-              {/* code for button */}
-              <button className="button" type="submit">
-                Next
+              {/* <div className="code-input">
+                <input
+                  type="text"
+                  placeholder="Enter 6 digit code"
+                  value={code}
+                  onChange={handleCodeChange}
+                  required
+                />
+                <button type="button">Send code</button>
+              </div> */}
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Submitting..." : "Next"}
               </button>
+              {error && <p className={styles.error}>{error}</p>}
               <footer>
                 <p>
-                  Already have an account? <span className="login">Log in</span>
+                  Already have an account?{" "}
+                  <span className={styles.login} onClick={handleLogin}>
+                    Log in
+                  </span>
                 </p>
               </footer>
             </form>

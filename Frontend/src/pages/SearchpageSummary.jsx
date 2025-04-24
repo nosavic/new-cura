@@ -14,14 +14,7 @@ const SearchpageSummary = () => {
   );
 
   const viewShoppingCart = () => {
-    navigate("/findmeds");
-  };
-
-  const continueShopping = () => {
-    // For now, we'll just show an alert
-    alert(`Continue shopping cart with ${medicineCount} medicines`);
-
-    navigate("/order-summary", { state: { selectedMedicines } });
+    navigate("/findmeds", { state: { selectedMedicines } });
   };
 
   return (
@@ -61,7 +54,10 @@ const SearchpageSummary = () => {
           </button>
 
           <button
-            onClick={continueShopping}
+            onClick={() =>
+              navigate("/findmeds-loading", { state: { selectedMedicines } })
+            }
+            disabled={selectedMedicines.length === 0}
             className="summary-btn continue-btn"
           >
             Continue Shopping

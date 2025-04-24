@@ -15,10 +15,12 @@ import { useState } from "react";
 import ProfileSignup from "./pages/ProfileSignup";
 import Dashboard from "./pages/Dashboard";
 import FindMedsLoading from "./components/FindMedsLoading";
-import PharamacySelection from "./pages/PharmacySelection";
+import PharmacySelection from "./pages/PharmacySelection";
+import UpdatedCart from "./pages/UpdatedCart";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
+  const [pharmacy, setPharmacy] = useState([]);
   return (
     <Routes>
       {/* Patients Routing */}
@@ -44,11 +46,6 @@ function App() {
           />
         }
       />
-
-      <Route path="/findmeds-loading" element={<FindMedsLoading />} />
-
-      <Route path="/pharmacy-selection" element={<PharamacySelection />} />
-
       <Route
         path="/search-summary"
         element={
@@ -59,7 +56,43 @@ function App() {
         }
       />
 
-      <Route path="/order-summary" element={<OrderSummary />} />
+      <Route path="/findmeds-loading" element={<FindMedsLoading />} />
+
+      <Route
+        path="/pharmacy-selection"
+        element={
+          <PharmacySelection
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
+          />
+        }
+      />
+
+      <Route
+        path="/updated-cart"
+        element={
+          <UpdatedCart
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
+          />
+        }
+      />
+
+      <Route
+        path="/order-summary"
+        element={
+          <OrderSummary
+            selectedMedicines={selectedMedicines}
+            setSelectedMedicines={setSelectedMedicines}
+            pharmacy={pharmacy}
+            setPharmacy={setPharmacy}
+          />
+        }
+      />
 
       <Route path="/complete-profile" element={<ProfileSignup />} />
 

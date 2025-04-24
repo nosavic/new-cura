@@ -23,12 +23,16 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
-    navigate("/signup");
+    navigate("/signup-phone");
   };
 
   const handleLogin = () => {
     navigate("/signin");
   };
+
+  const handleMedication = () => {
+    navigate("/findmeds")
+  }
 
   return (
     <div className="landing-page-container">
@@ -52,7 +56,7 @@ const LandingPage = () => {
           </p>
           <div className="Buttons">
             <button onClick={handleSignUp}>Sign Up</button>
-            <button onClick={handleLogin}>Login</button>
+            <button onClick={handleLogin}>Sign In</button>
           </div>
         </div>
 
@@ -110,7 +114,7 @@ const LandingPage = () => {
             With Confidence-experience ,Fast safe and Reliable Access to
             Medication With Curamap
           </p>
-          <button>Browse Medications</button>
+          <button onClick={handleMedication}>Browse Medications</button>
         </div>
         <img src={heartImage} alt="heart image" />
       </div>

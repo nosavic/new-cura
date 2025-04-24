@@ -88,19 +88,6 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
       return;
     }
 
-    // Prepare the data for submission
-    // const submissionData = selectedMedicines.map((medicine) => ({
-    //   id: medicine.id,
-    //   name: medicine.name,
-    //   dosage: medicine.selectedDosage,
-    //   description: medicine.description,
-    //   packageSize: medicine.selectedPackageSize,
-    //   quantity: medicine.quantity,
-    //   prescription: medicine.prescription || false,
-    //   price:
-    //     medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize],
-    // }));
-
     const submissionData = selectedMedicines.map((medicine) => {
       const calculatedPrice =
         medicine.prices[medicine.selectedDosage][medicine.selectedPackageSize] *
@@ -191,7 +178,7 @@ const SearchPage = ({ selectedMedicines, setSelectedMedicines }) => {
           className="submit-btn"
           disabled={selectedMedicines.length === 0}
         >
-          Find Med
+          Find ({selectedMedicines.length}) Med
         </button>
       </footer>
     </div>
