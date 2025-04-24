@@ -16,10 +16,7 @@ app.use(cookieParser()); // <-- Add cookie-parser middleware
 // Configure CORS options
 
 const corsOptions = {
-  origin: [
-    process.env.ALLOWED_ORIGIN || "http://localhost:3000",
-    "http://localhost:5173",
-  ],
+  origin: process.env.ALLOWED_ORIGIN || "http://localhost:3000",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 200,
