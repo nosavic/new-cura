@@ -20,7 +20,9 @@
     display: flex;
     gap: 20rem;
     }
-form {
+
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,9 +37,10 @@ form {
   width: 50rem;
   height: 100vh;
   z-index: -1;
-}
+} */
 
-input[type="text"],
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -47,16 +50,18 @@ input[type="password"] {
   border-radius: 4px;
   border: 2px solid #110f0f;
   font-size: 16px;
-}
+} */
 
-button {
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* button {
   width: 50px 60px;
   padding: 10px 150px;
   border-radius: 4px;
   border: 1px solid #0e0d0d;
   font-size: 16px;
   margin-top: 40px;
-}
+} */
+
 .redirect-link {
   margin-top: -50px;
   display: flex;
