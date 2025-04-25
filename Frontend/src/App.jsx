@@ -18,6 +18,7 @@ import PharmacistProfile from "./pages/PharmacistProfile";
 import FindMedsLoading from "./components/FindMedsLoading";
 import PharmacySelection from "./pages/PharmacySelection";
 import UpdatedCart from "./pages/UpdatedCart";
+import PhamarcySignUp from "./components/forms/PhamarcySignUp";
 
 function App() {
   const [selectedMedicines, setSelectedMedicines] = useState([]);
@@ -100,7 +101,7 @@ function App() {
       {/* Pharmacy Routing */}
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/pharmacist-profile" element={<PharmacistProfile />} />
-
+      <Route path="/pharmacy-signup" element={<PhamarcySignUp />} />
     </Routes>
   );
 }

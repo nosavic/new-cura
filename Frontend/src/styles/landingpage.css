@@ -270,10 +270,11 @@ body {
   flex-direction: column;
 }
 
-.name-pre h4,
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* .name-pre h4,
 p {
   text-wrap: nowrap;
-}
+} */
 
 .card-3 {
   display: flex;
@@ -368,12 +369,12 @@ p {
   height: 26rem;
 }
 
-.card-4{
+.card-4 {
   padding-top: 9em;
   padding-left: 6em;
 }
 
-.card-5{
+.card-5 {
   padding-top: 4.5em;
 }
 
@@ -384,13 +385,13 @@ p {
   text-wrap: wrap;
 }
 
-.card-6{
+.card-6 {
   padding-top: 13.5em;
   padding-left: 6.5em;
 }
 
-.card-6 p{
-margin-bottom: 4em;
+.card-6 p {
+  margin-bottom: 4em;
 }
 /* sixth levl content*/
 
