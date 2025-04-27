@@ -30,7 +30,7 @@ const patientSchema = new mongoose.Schema(
     },
     insuranceProvider: { type: String },
     insuranceNumber: { type: String },
-    password: { type: String },
+    password: { type: String, required: true },
     isActive: { type: Boolean, default: true }, // Active or inactive status
   },
   { timestamps: true }
