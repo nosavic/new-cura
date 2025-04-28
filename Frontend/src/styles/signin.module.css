@@ -1,6 +1,6 @@
 /* sign in  css section */
 
-.login-container {
+.container {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
@@ -17,7 +17,7 @@
   padding-block: 2rem;
 }
 
-.login-box {
+.loginBox {
   background: #fff;
   padding: 3rem;
   border-radius: 10px;
@@ -27,30 +27,28 @@
   position: relative;
 }
 
-.back-btn {
+.backButton {
   position: absolute;
   top: 20px;
+  left: 20px;
   font-size: 18px;
   cursor: pointer;
   background: transparent;
   border: none;
 }
 
-.back-btn {
-  left: 20px;
-}
 
-.login-text {
+.loginText {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.input-group {
+.inputGroup {
   display: flex;
   flex-direction: column;
 }
 
-.input-group input {
+.inputGroup input {
   padding: 10px;
   font-size: 18px;
   border: 1.5px solid #000;
@@ -76,8 +74,8 @@
   border-radius: 0;
 }
 
-.sign-in-btn,
-.google-signin {
+.signinButton,
+.googleButton {
   width: 100%;
   padding: 10px;
   border: 1px solid #83c0b9;
@@ -86,16 +84,16 @@
   font-size: 18px;
 }
 
-.sign-in-btn {
+.signinButton {
   background: transparent;
 }
-.sign-in-btn:hover,
-.google-signin:hover {
+.signinButton:hover,
+.googleButton:hover {
   background: #83c0b9;
   color: #fff;
 }
 
-.google-signin {
+.googleButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,16 +102,16 @@
   background: transparent;
 }
 
-.google-signin img {
+.googleButton img {
   width: 20px;
 }
 
-.signup-text {
+.signupText {
   text-align: center;
   margin-top: 40px;
 }
 
-.signup-text a {
+.signupText a {
   color: #83c0b9;
   text-decoration: none;
   cursor: pointer;
@@ -121,27 +119,27 @@
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .login-box {
+  .loginBox {
     padding: 2rem;
     max-width: 95%;
   }
 
-  .input-group input {
+  .inputGroup input {
     font-size: 14px;
   }
 
-  .sign-in-btn,
-  .google-signin {
+  .signinButton,
+  .googleButton {
     font-size: 14px;
   }
   .options {
     font-size: 12px;
   }
 
-  .signup-text {
+  .signupText {
     margin-top: 30px;
   }
-  .signup-text a {
+  .signupText a {
     font-size: 14px;
   }
 }

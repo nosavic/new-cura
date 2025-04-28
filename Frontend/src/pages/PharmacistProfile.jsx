@@ -2,13 +2,13 @@ import React from 'react';
 import Sidebar from '../components/DashboardComponents/Sidebar';
 import ProfileCard from "../components/DashboardComponents/ProfileCard";
 import ReviewList from "../components/DashboardComponents/ReviewList";
-import "../styles/pharmacistprofile.css";
+import  styles from "../styles/pharmacistprofile.module.css";
 
 const PharmacistProfile = () => {
   return (
-    <div className="pharm-profile-container">
+    <div className={styles.container}>
       <Sidebar />
-      <div className="pharm-profile-content">
+      <div className={styles.content}>
         <ProfileCard />
         <ReviewList />
       </div>

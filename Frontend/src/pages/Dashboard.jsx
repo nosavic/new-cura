@@ -6,21 +6,21 @@ import DashboardCard from "../components/DashboardComponents/DashboardCard";
 import Sidebar from "../components/DashboardComponents/Sidebar";
 import DrugsSold from "../components/DashboardComponents/DrugsSold";
 import VendorActivity from "../components/DashboardComponents/VendorActivity";
-import "../styles/dashboard.css";
+import styles from "../styles/dashboard.module.css";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-container">
+    <div className={styles.container}>
       <Sidebar />
-      <main className="main-content">
+      <main className={styles.main}>
         <Header />
-        <div className="dashboard">
-          <div className="top-cards">
+        <div className={styles.dashboard}>
+          <div className={styles.topCards}>
             <DrugsSold />
             <VendorActivity />
             <DashboardCard  />
           </div>
-          <div className="middle-section">
+          <div className={styles.middleSection}>
             <OrdersTable />
           </div>
           <RevenueChart />

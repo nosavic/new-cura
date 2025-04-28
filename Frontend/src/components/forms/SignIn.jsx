@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "../../styles/signin.css";
+import styles from  "../../styles/signin.module.css";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
@@ -25,17 +25,17 @@ const SignIn = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <div className="back-btn">
+    <div className={styles.container}>
+      <div className={styles.loginBox}>
+        <div className={styles.backButton}>
           <a href="/">
             <img src="/src/assets/CaretLeft.png" alt="" />
           </a>
         </div>
 
-        <h2 className="login-text">Log in</h2>
+        <h2 className={styles.loginText}>Log in</h2>
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
+          <div className={styles.inputGroup}>
             <input
               type="email"
               placeholder="Email address"
@@ -45,7 +45,7 @@ const SignIn = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className={styles.inputGroup}>
             <input
               type="password"
               placeholder="Password"
@@ -55,7 +55,7 @@ const SignIn = () => {
             />
           </div>
 
-          <div className="options">
+          <div className={styles.options}>
             <label>
               <input
                 type="checkbox"
@@ -67,14 +67,14 @@ const SignIn = () => {
             <a href="/forgot-password">Forgot password?</a>
           </div>
 
-          <button type="submit" className="sign-in-btn" onClick={handleProfile}>
+          <button type="submit" className={styles.signinButton} onClick={handleProfile}>
             Sign in
           </button>
 
-          <button className="google-signin">Or sign in with Google</button>
+          <button className={styles.googleButton}>Or sign in with Google</button>
         </form>
 
-        <p class="signup-text">
+        <p class={styles.signupText}>
           Don't have an account? <a href="#" onClick={handleSignUp}>Sign up</a>
         </p>
       </div>

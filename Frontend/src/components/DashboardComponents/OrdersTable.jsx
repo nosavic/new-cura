@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../../styles/dashboard.module.css";
 
 const orders = [
   { name: "John Doe", date: "10/02/2025", status: "Pending" },
@@ -9,13 +10,13 @@ const orders = [
 
 const OrdersTable = () => {
   return (
-    <div className="ordersTableWrapper">
-      <div className="orders-table">
+    <div className={styles.tableWrap}>
+      <div className={styles.table}>
         <h3>Latest Orders</h3>
         <table>
           <thead>
             <tr>
-              <th className="table-head">Name</th>
+              <th className={styles.tableHead}>Name</th>
               <th>Date</th>
               <th>Status</th>
             </tr>
