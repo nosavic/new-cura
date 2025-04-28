@@ -1,13 +1,13 @@
 /* Dashboard Page Styling*/
 
 /*Dashboard Style*/
-.dashboard-container {
+.container {
   display: flex;
   margin: 0;
   font-family: sans-serif;
   background-color: #fff;
 }
-.main-content {
+.main {
   padding: 30px;
   flex-grow: 1;
 }
@@ -53,12 +53,12 @@
   font-size: 18px;
 }
 
-.sidebar-list {
+.sidebarList {
   list-style: none;
   padding: 0;
 }
 
-.sidebar-list a {
+.sidebarList a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -78,14 +78,14 @@
   border-radius: 8px;
 }
 
-.sidebar-footer {
+.sidebarFooter {
   position: absolute;
   bottom: 20px;
   width: 80%;
 }
 
 /*Header Style*/
-.dashboard-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,19 +93,19 @@
   padding: 0 20px;
   border-radius: 10px;
 }
-.dashboard-header h2 {
+.header h2 {
   color: #83c0b9;
 }
-.dashboard-header .header-text {
+.header .text {
   margin-top: 0;
 }
 
-.dashboard-header .header-right {
+.header .profile {
   display: flex;
   align-items: center;
 }
 
-.profile-img {
+.avatar {
   width: 40px;
   border-radius: 50%;
   margin-left: 15px;
@@ -157,7 +157,7 @@ input:checked + .slider:before {
 }
 
 /*Dashboard Cards*/
-.top-cards {
+.topCards {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -165,14 +165,14 @@ input:checked + .slider:before {
   padding: 20px;
 }
 
-.drugs-sold-card {
+.drugsSold {
   padding: 20px;
   background: #83c0b9;
   height: 300px;
   border-radius: 12px;
 }
 
-.vendor-activity-card {
+.vendorActivity {
   padding: 20px;
   background: #fff;
   height: 300px;
@@ -181,7 +181,7 @@ input:checked + .slider:before {
   border: 1px solid #e0e0e0;
 }
 
-.dashboard-card {
+.dashboardCard {
   padding: 20px;
   background: #fff;
   height: 300px;
@@ -190,23 +190,23 @@ input:checked + .slider:before {
   border: 1px solid #e0e0e0;
 }
 
-.dashboard-card h2 {
+.dashboardCard h2 {
   color: rgb(3, 3, 85);
   margin: 0;
 }
 
-.dashboard-card p {
+.dashboardCard p {
   color: #83c0b9;
   margin-bottom: 10px;
 }
 
-.dashboard-card label {
+.dashboardCard label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-.dashboard-card input {
+.dashboardCard input {
   margin: 0;
   padding: 10px;
   font-size: 16px;
@@ -218,7 +218,7 @@ input:checked + .slider:before {
 }
 
 /*Orders Table Style*/
-.orders-table {
+.table {
   margin-top: 30px;
   background: transparent;
   padding: 20px;
@@ -228,7 +228,7 @@ input:checked + .slider:before {
   border: 1px solid #000;
 }
 
-.ordersTableWrapper {
+.tableWrap {
   width: 100%;
   height: 100%;
   display: flex;
@@ -236,20 +236,20 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.orders-table table {
+.table table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 5px;
 }
 
-.orders-table th {
+.table th {
   border: 1px solid #000;
   border-radius: 10px;
   padding: 0;
 }
 
-.orders-table th,
-.orders-table td {
+.table th,
+.table td {
   padding: 10px;
   text-align: center;
 }
@@ -270,7 +270,7 @@ input:checked + .slider:before {
   background: #83c0b9;
   padding: 10px 30px 20px 30px;
 }
-.revenueChartWrapper {
+.revenueChartContainer {
   width: 100%;
   height: 100%;
   display: flex;

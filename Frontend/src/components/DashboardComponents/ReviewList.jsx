@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
+import styles from "../../styles/pharmacistprofile.module.css";
 
 const reviews = [
   {
@@ -32,17 +33,17 @@ const renderStars = (count) => {
 
 const ReviewList = () => {
   return (
-    <div className="pharm-reviews-section">
-      <div className="pharm-profile-tabs">
-        <button className="pharm-active">My Profile</button>
-        <button>Change Password</button>
-        <button>Notification</button>
-        <button>Reviews</button>
+    <div className={styles.reviews}>
+      <div className={styles.pharmReviewHeader}>
+        <a href="/">My Profile</a>
+        <a href="">Change Password</a>
+        <a href="">Notification</a>
+        <a href="">Reviews</a>
       </div>
       {reviews.map((review, index) => (
-        <div key={index} className="pharm-review-card">
+        <div key={index} className={styles.reviewCard}>
           <p>{review.text}</p>
-          <div className="pharm-stars">{renderStars(review.stars)}</div>
+          <div className={styles.stars}>{renderStars(review.stars)}</div>
         </div>
       ))}
     </div>

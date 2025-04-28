@@ -1,6 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
+import styles from "../../styles/dashboard.module.css";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
@@ -11,7 +12,7 @@ defaults.plugins.title.font.size = 20;
 
 const DrugsSold = () => {
   return (
-    <div className="drugs-sold-card">
+    <div className={styles.drugsSold}>
       <Doughnut
         data={{
           labels: ["Orders", "Sold"],

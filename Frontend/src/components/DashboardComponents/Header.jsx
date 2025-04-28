@@ -1,23 +1,24 @@
 import React from "react";
-import avatar from "/src/assets/Avatar.svg" 
+import avatar from "/src/assets/Avatar.svg" ;
+import styles from "../../styles/dashboard.module.css";
 
 
 const Header = () => {
   return (
-    <header className="dashboard-header">
+    <header className={styles.header}>
       <div>
         <h2>Welcome Pharm Daniel</h2>
-        <p className="header-text">You have 4 pending orders</p>
+        <p className={styles.text}>You have 4 pending orders</p>
       </div>
-      <div className="header-right">
-        <label className="switch">
+      <div className={styles.profile}>
+        <label className={styles.switch}>
           <input type="checkbox" defaultChecked />
           <span className="slider round"></span>
         </label>
         <img
           src={avatar}
           alt="User"
-          className="profile-img"
+          className={styles.avatar}
         />
       </div>
     </header>

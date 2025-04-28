@@ -2,6 +2,7 @@ import React from "react";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import VendorData from "../data/vendorData.json";
+import styles from "../../styles/dashboard.module.css";
 
 defaults.maintainAspectRatio = false;
 defaults.responsive = true;
@@ -11,7 +12,7 @@ defaults.plugins.title.font.size = 20;
 
 const VendorActivity = () => {
   return (
-    <div className="vendor-activity-card">
+    <div className={styles.vendorActivity}>
       <Bar
         data={{
           labels: VendorData.map((data) => data.label),
