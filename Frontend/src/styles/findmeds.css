@@ -1,0 +1,221 @@
+.findmeds-wrapper {
+  background-color: #fff;
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 4rem;
+  padding-block: 2rem;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandlogo {
+  width: 160px;
+  height: 80px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+}
+
+#searchBar {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+
+  > input {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: 1.5px solid #000;
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+
+  > img {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(-50%);
+  }
+}
+
+.med-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.med-one,
+.med-two,
+.med-three {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 4rem;
+  padding-block: 2rem;
+  border: 1px solid #399b90;
+  max-width: 700px;
+  width: 100%;
+  min-height: 350px;
+  border-radius: 8px;
+
+  > h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.med-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.med-description {
+  text-wrap: wrap;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > label {
+    font-size: 12px;
+  }
+
+  > select {
+    font-size: 14px;
+    padding-inline: 0.75rem;
+    padding-block: 0.25rem;
+    width: 100px;
+    height: 3rem;
+    border: 1.5px solid #000;
+    border-radius: 4px;
+
+    > option {
+      font-size: 1rem;
+    }
+  }
+}
+
+.quantity-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.handlers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  > p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.increment,
+.decrement {
+  background-color: transparent;
+  border: 2px solid #000;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.findmed-box {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.findmed-cta {
+  width: 100%;
+  padding-block: 8px;
+  color: #fff;
+  background-color: #83c0b9;
+  border: 1px solid #399b90;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #399b90;
+  }
+}
+
+@media (max-width: 480px) {
+  .findmeds-wrapper {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    gap: 1.5rem;
+  }
+
+  .med-one,
+  .med-two,
+  .med-three {
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+
+    > p {
+      text-align: center;
+    }
+  }
+
+  .med-details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .details {
+    > select {
+      padding-inline: 0.75rem;
+      font-size: 12px;
+
+      > option {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .brandlogo {
+    width: 120px;
+    height: 60px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+}

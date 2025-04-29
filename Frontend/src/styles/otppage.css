@@ -1,0 +1,47 @@
+.bodyotp{
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    height: 100vh;              
+    margin: 0; 
+    
+    
+}
+
+
+.boxOne {
+    width:800px;
+    height: 80vh;
+  padding: 35px;
+   background-color: white;
+}
+
+.topText{
+    text-align: center;
+    color: grey;
+}
+
+.bodyotp {
+line-height: 2.4;
+}
+
+.boxTwo {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+ 
+.boxchilds {
+    border: 1px solid black;
+    height: 10vh;
+    width: 400px;
+    margin-left: 80px;
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    gap: 50px;
+    color:grey
+}
+.onlyAchord{
+    margin: 0 auto;
+}

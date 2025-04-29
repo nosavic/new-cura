@@ -1,0 +1,280 @@
+/* Dashboard Page Styling*/
+
+/*Dashboard Style*/
+.container {
+  display: flex;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+.main {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.dashboard {
+  margin-top: 30px;
+}
+
+/*Sidebar Style*/
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #83c0b9, #34d399);
+  margin: 20px;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.sidebar .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 20px;
+  
+}
+
+.sidebar .logo img {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.sidebar .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebarList a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 8px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.sidebarFooter {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+}
+
+/*Header Style*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.header h2 {
+  color: #83c0b9;
+}
+.header .text {
+  margin-top: 0;
+}
+
+.header .profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+/* Optional toggle switch style for header */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #34d399;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/*Dashboard Cards*/
+.topCards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.drugsSold {
+  padding: 20px;
+  background: #83c0b9;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.vendorActivity {
+  padding: 20px;
+  background: #fff;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.dashboardCard {
+  padding: 20px;
+  background: #fff;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.dashboardCard h2 {
+  color: rgb(3, 3, 85);
+  margin: 0;
+}
+
+.dashboardCard p {
+  color: #83c0b9;
+  margin-bottom: 10px;
+}
+
+.dashboardCard label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.dashboardCard input {
+  margin: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #83c0b9;
+  border-radius: 5px;
+  background-color: #83c0b9;
+  color: #fff;
+  outline: none;
+}
+
+/*Orders Table Style*/
+.table {
+  margin-top: 30px;
+  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+  width: 50%;
+  height: 300px;
+  border: 1px solid #000;
+}
+
+.tableWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.table th {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+}
+
+/*Revenue Chart Style*/
+.revenue-chart {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.revenueChart {
+  width: 50%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 12px;
+  background: #83c0b9;
+  padding: 10px 30px 20px 30px;
+}
+.revenueChartContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}

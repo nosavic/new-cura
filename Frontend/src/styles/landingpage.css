@@ -1,0 +1,629 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f0f7ff;
+  min-height: 100vh;
+}
+
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.Logo img:nth-child(1) {
+  max-width: 100%;
+  height: 60px;
+  width: 60px;
+}
+
+.MainContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10rem;
+}
+
+.TextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 600px;
+}
+
+.TextContent h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.TextContent p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.Buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.Buttons button {
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Buttons button:first-child {
+  background-color: transparent;
+  color: #007e85;
+  border: none;
+}
+
+.Buttons button:first-child:hover {
+  color: #0f0f0f;
+}
+
+.Buttons button:last-child {
+  background-color: #007e85;
+  color: #f0f7ff;
+  border: 1px solid #4a9eff;
+}
+
+.Buttons button:last-child:hover {
+  color: #080808;
+}
+
+.MainContent img:nth-child(1) {
+  max-width: 100%;
+  height: auto;
+  width: 100px;
+  max-width: 100%;
+}
+.MainContent img:nth-child(2) {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+}
+
+/* second level content of Landing Page*/
+
+.second-level-content {
+  padding: 3em;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+  justify-content: flex-start;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
+}
+
+.second-level-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.Benefits {
+  display: flex;
+  gap: 2.7em;
+}
+
+.Benefits div {
+  display: flex;
+  gap: 1em;
+}
+
+.benefit-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-level-content-p {
+  font-size: 18px;
+}
+
+.benefit-text-container p {
+  text-wrap: wrap;
+}
+.Benefits span p {
+  font-size: 1em;
+}
+
+.first-benefits {
+  flex: 2;
+}
+
+.second-benefits {
+  flex: 1;
+}
+.third-benefits {
+  flex: 1;
+}
+.second-level-content-p {
+  font-size: 1em;
+  flex: 2;
+  width: 100%;
+  text-wrap: nowrap;
+}
+.Benefits div img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Third level content of Landing Page*/
+
+.third-level-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12em;
+  width: 100%;
+  max-width: 90rem;
+  border-bottom: 1px solid #080808;
+}
+
+.card-1-img-container {
+  position: absolute;
+  display: flex;
+
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 25rem;
+  border-radius: 1em;
+  padding: 10rem;
+  max-width: 500px;
+  font-size: 14px;
+  border: 1px solid #333;
+}
+
+.card-3-img-container {
+  position: absolute;
+  border-radius: 3em;
+  bottom: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+.card-text-section {
+  margin-top: 10rem;
+}
+
+.card-text-section-1 {
+  margin-top: 15rem;
+}
+
+.third-level-content-text {
+  display: flex;
+  width: 50em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 16px;
+  gap: 5em;
+  padding-left: 2em;
+}
+
+.third-level-content-text p {
+  text-wrap: wrap;
+}
+.third-level-content-text h2 {
+  font-size: 2.1rem;
+  color: #333;
+}
+
+.third-level-content-text button {
+  width: 9rem;
+  height: 4.5rem;
+  padding: 0.5em;
+  background: #007e85;
+  color: #f0f7ff;
+  border: none;
+  border-radius: 0.3em;
+}
+
+/* Fourth level content of Landing Page*/
+
+.fourth-level-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 4rem;
+  flex-direction: column;
+}
+
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* .name-pre h4,
+p {
+  text-wrap: nowrap;
+} */
+
+.card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-3 h3 {
+  font-size: 2em;
+}
+
+.card-3 img {
+  height: 20em;
+}
+
+.Drug-price p {
+  text-wrap: nowrap;
+}
+
+.services-and-offers {
+  display: flex;
+  gap: 12rem;
+  padding: 2rem;
+}
+
+.services-and-offers span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+}
+
+.services-and-offers span h2 {
+  font-size: 15px;
+}
+
+.services-and-offers span p {
+  font-size: 14px;
+  text-wrap: wrap;
+}
+
+/* fifth level content of Landing Page*/
+
+.fifth-level-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.fifth-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.testimonial-card {
+  background: #d4e9e7;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 20rem;
+  border-radius: 1em;
+  padding: 10rem;
+  padding-left: 5em;
+  max-width: 500px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.testimonial-card p {
+  width: 300px;
+  height: 300px;
+}
+.profile {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  margin-left: -7em;
+  gap: 2em;
+}
+
+.card-5 {
+  width: 26rem;
+  height: 26rem;
+}
+
+.card-4 {
+  padding-top: 9em;
+  padding-left: 6em;
+}
+
+.card-5 {
+  padding-top: 4.5em;
+}
+
+.image-container {
+  width: 150px;
+}
+.testimonial-card p {
+  text-wrap: wrap;
+}
+
+.card-6 {
+  padding-top: 13.5em;
+  padding-left: 6.5em;
+}
+
+.card-6 p {
+  margin-bottom: 4em;
+}
+/* sixth levl content*/
+
+.sixth-level-content {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
+}
+
+.sixth-level-content h2 {
+  padding-top: 3em;
+  padding-left: 3em;
+}
+
+.card-con {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 4rem;
+  height: 35rem;
+  flex-direction: column;
+  border-radius: 1em;
+  border: #007e85 solid 1px;
+}
+
+.patients-portal-card-img-container,
+.pharmacy-portal-card-img-container {
+  display: flex;
+  gap: 15em;
+  border-radius: 3em;
+  top: 0.5em;
+  left: 1em;
+  max-width: 100%;
+}
+
+.patients-portal-card-text,
+.pharmacy-portal-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  text-wrap: wrap;
+}
+
+.portal button {
+  padding: 0.6em 1em;
+  background: #f0f7ff;
+  border: 0.1em solid;
+  border-color: #007e85;
+  border-radius: 0.3em;
+}
+
+/* seventh level content */
+
+.seventh-level-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seventh-level-content h2 {
+  font-size: 29px;
+}
+
+.faq ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  list-style-type: none;
+  text-wrap: nowrap;
+}
+
+.faq ul li {
+  border: 1px solid #080808;
+  border-radius: 1.2em;
+  width: 60em;
+  height: 5em;
+  padding: 2em 2em;
+}
+
+/* eight level content  */
+
+.eight-level-content {
+  display: flex;
+  gap: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #080808;
+  border-bottom: 1px solid #080808;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  list-style-type: none;
+}
+/* Responsive Design */
+
+/* Small Mobile Devices (up to 576px) */
+@media (max-width: 576px) {
+  .Logo {
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .Logo img {
+    width: 120px;
+  }
+
+  .MainContent {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .TextContent {
+    max-width: 100%;
+  }
+
+  .TextContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .TextContent p {
+    font-size: 0.9rem;
+  }
+
+  .Buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .Buttons button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .MainContent img {
+    max-width: 300px;
+  }
+}
+
+/* Tablets (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .Logo {
+    padding-left: 1.2rem;
+    padding-top: 1.2rem;
+  }
+
+  .MainContent {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .TextContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .TextContent p {
+    font-size: 1rem;
+  }
+
+  .Buttons {
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .MainContent img {
+    max-width: 400px;
+  }
+}
+
+/* Larger Desktops (1024px and above) */
+@media (min-width: 1024px) {
+  .MainContent {
+    padding: 4rem 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .TextContent h1 {
+    font-size: 3.5rem;
+  }
+
+  .TextContent p {
+    font-size: 1.3rem;
+  }
+
+  .Buttons button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,72 @@
+
+
+.pharmacy-signup-container {
+    position: relative;
+  background-image: url("../assets/Background.svg");
+  width: 100%;
+  height: 150vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+}
+
+
+.direction-header{
+    position: absolute;
+    top: 4em;
+    display: flex;
+    gap: 20rem;
+    }
+
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: -250px;
+  background: #f9fdfd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50rem;
+  height: 100vh;
+  z-index: -1;
+} */
+
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 90px;
+  margin: 10px 0;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #110f0f;
+  font-size: 16px;
+} */
+
+/* BEFORE YOU UNCOMMENT THIS CODE MAKE SURE YOU GIVE IT A CLASS SO IT STOPS AFFECTING OTHER PEOPLE'S CODE */
+/* button {
+  width: 50px 60px;
+  padding: 10px 150px;
+  border-radius: 4px;
+  border: 1px solid #0e0d0d;
+  font-size: 16px;
+  margin-top: 40px;
+} */
+
+.redirect-link {
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+

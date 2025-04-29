@@ -1,0 +1,83 @@
+.divhouse {
+    background-color: rgb(126, 124, 124);
+    width: 300px; 
+    height: 320px;
+    border-radius: 8px;            
+ 
+}
+
+.divhouse{
+    padding-top: 70px;
+    background-color: white;
+    
+}
+
+.paymentSuccessful {
+    width: 300px;             
+    height: 30px;             
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 1);
+    font-size: 17px;
+    font : roboto;
+    font-weight: 300;
+}
+
+ .orderCompleted {
+    width: 300px;             
+    height: 30px;             
+    display: flex;
+    justify-content: center;
+    color: rgb(127, 189, 182);
+    line-height: 2;
+    font-size: 25px;
+    font: Palanquin;
+    font-weight: 700;
+ }
+
+ .divcheck {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+ }
+
+ .continueShopping {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+ }
+
+ .orderDetails {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+ }
+
+ .buttonContinueShopping {
+    width: 200px;
+    border-radius: 3px;
+    background-color: rgba(57, 155, 144, 1);
+    border: none;
+    padding: 5px;
+    color: rgb(254, 252, 252);
+    font-size: 13px;
+    font: Palanquin;
+    font-weight: 700;
+ }
+
+ .buttonOrderDetails{
+    width: 200px;
+    border: 3px solid rgb(123, 188, 180);
+    padding: 5px;
+    color: rgba(0, 0, 0, 2);
+    font-size: 13px;
+    font: Palanquin;
+    font-weight: 700;
+ }
+
+ .buttonContinueShopping:hover {
+    background-color: rgb(18, 120, 108);
+    }
+    .buttonOrderDetails:hover{
+        background-color: rgb(234, 228, 228);
+    }

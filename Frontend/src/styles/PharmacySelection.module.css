@@ -1,0 +1,77 @@
+/* src/styles/PharmacyList.module.css */
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-background: #f3f4f6;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-600: #4b5563;
+  --color-gray-800: #1f2937;
+  --color-green-100: #dcfce7;
+  --color-green-600: #16a34a;
+  --color-red-100: #fee2e2;
+  --color-red-600: #dc2626;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --border-radius: 0.5rem;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.container {
+  background-color: #fff;
+  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 4rem;
+  padding-block: 2rem;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--color-gray-800);
+}
+
+.backButton {
+  padding: var(--spacing-2) var(--spacing-4);
+  color: #399b90;
+  background: none;
+  border: 1px solid #399b90;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background-color: #399b90;
+  color: #fff;
+}
+
+.pharmacyList {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16rem;
+  font-size: 1.25rem;
+  color: var(--color-gray-600);
+}

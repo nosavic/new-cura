@@ -1,0 +1,134 @@
+.main {
+  background-color: #69c4b9;
+  background-image: url(../assets/Hero-section.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.backX {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 10px 20px;
+}
+
+.backX img {
+  cursor: pointer;
+  width: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.white {
+  padding-inline: 60px;
+  padding-block: 20px 40px;
+  background-color: white;
+}
+
+.dateInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.dob {
+  width: 100px;
+}
+.dob::placeholder {
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 12px;
+  font-weight: 400;
+  color: #717171;
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.signupMethods {
+  display: flex;
+}
+.email {
+  margin-left: auto;
+}
+
+.phoneInput {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid black;
+  height: 42px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.phoneInput span {
+  padding-right: 10px;
+}
+
+.phoneInput input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.codeInput {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+  height: 42px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+
+.codeInput input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.codeInput button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #83c0b9;
+  border-radius: 10px;
+  height: 42px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+}
+
+.login {
+  color: #83c0b9;
+  cursor: pointer;
+}
