@@ -1,0 +1,77 @@
+name: Staging Deployment
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - staging
+  push:
+    branches:
+      - staging
+
+env:
+  AWS_REGION: "eu-west-3"
+  AWS_ACCESS_KEY_ID: ${{secrets.CURAMAP_AWS_ACCESS_KEY_ID}}
+  AWS_SECRET_ACCESS_KEY: ${{secrets.CURAMAP_AWS_SECRET_ACCESS_KEY}}
+  AWS_ECR_REGISTRY: ${{secrets.CURAMAP_ECR_REGISTRY}}
+  AWS_ECR_REPOSITORY: ${{secrets.CURAMAP_ECR_REPOSITORY}}
+  SSH_STAGING_HOST: ${{secrets.CURAMAP_HOST}}
+  CURAMAP_SSH_USER: ${{secrets.CURAMAP_USERNAME}}
+  SSH_STAGING_PASSWORD: ${{secrets.CURAMAP_PASS}}
+
+concurrency:
+  group: ${{{github.head_ref || github.run_id}}}
+  cancel_in_progress: true
+  
+
+jobs:
+  Build_curamap_image:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Log-in to Elastic Container Registry
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build Image and Push to ECR
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ env.AWS_ECR_REGISTRY }}/${{ env.AWS_ECR_REPOSITORY }}:latest
+
+
+  Deploy_to_Staging:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to EC2 Server ⏳
+        uses: appleboy/ssh-action@master
+        if: github.ref == 'refs/heads/staging'
+        with:
+          host: ${{ env.SSH_STAGING_HOST }}
+          username: ${{ env.CURAMAP_SSH_USER }}
+          password: ${{ env.SSH_STAGING_PASSWORD }}
+          script: |
+            set -ex
+            export IMAGE_TAG=latest
+            cd ~/curamap
+            aws ecr get-login-password --region eu-west-3 | docker login --username AWS --password-stdin ${{ env.AWS_ECR_REGISTRY }}
+            docker compose pull curamap-frontend  
+            docker compose down -v --remove-orphans
+            docker compose up -d --force-recreate curamap-frontend
+            docker image prune -af
+
