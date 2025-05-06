@@ -8,6 +8,7 @@ const app = express();
 // Route Imports
 const pharmacyRoutes = require("./routes/pharmacyRoutes");
 const patientRoutes = require("./routes/patientRoutes");
+const medicineRoutes = require("./routes/medicine");
 
 // Middleware
 app.use(express.json());
@@ -27,6 +28,8 @@ app.use(cors());
 // Routes
 app.use("/api/pharmacies", pharmacyRoutes);
 app.use("/api/patients", patientRoutes);
+app.use("/api/medicines", medicineRoutes);
+
 // Database Connection
 mongoose
   .connect(process.env.DB_URI, { serverSelectionTimeoutMS: 60000 })
