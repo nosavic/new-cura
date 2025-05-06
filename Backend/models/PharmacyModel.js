@@ -8,15 +8,15 @@ const pharmacySchema = new mongoose.Schema(
       default: () => new mongoose.Types.ObjectId().toString(),
     },
     name: { type: String, required: true }, // Pharmacy Name
-    owner: { type: String, required: true }, // Owner's Name
+    owner: { type: String }, // Owner's Name
     email: { type: String, required: true, unique: true },
-    phone: { type: String, required: true },
-    address: { type: String, required: true },
-    city: { type: String, required: true },
-    state: { type: String, required: true },
-    country: { type: String, required: true },
+    phone: { type: String },
+    address: { type: String },
+    city: { type: String },
+    state: { type: String },
+    country: { type: String },
     website: { type: String }, // Optional website
-    licenseNumber: { type: String, required: true, unique: true }, // Regulatory License Number
+    licenseNumber: { type: String, unique: true }, // Regulatory License Number
     password: { type: String, required: true },
     passwordChangeAt: { type: Date },
     passwordResetToken: { type: String },
@@ -28,7 +28,6 @@ const pharmacySchema = new mongoose.Schema(
     },
     openingHours: {
       type: String,
-      required: true, // e.g., "8:00 AM - 10:00 PM"
     },
     closingStatus: {
       type: Boolean,
@@ -59,7 +58,10 @@ pharmacySchema.methods.comparePassword = async function (password) {
 pharmacySchema.methods.generatePasswordResetToken = function () {
   const resetToken = crypto.randomBytes(32).toString("hex");
   // Hashing the token for protection
-  this.passwordResetToken = crypto.createHash("sha256").update(resetToken).digest("hex");
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resetToken)
+    .digest("hex");
 
   // Set the expiration time for the token
   this.passwordResetExpires = Date.now() + 10 * 60 * 1000; // 10 minutes expiration
