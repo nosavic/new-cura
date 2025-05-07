@@ -15,8 +15,8 @@ const pharmacySchema = new mongoose.Schema(
     city: { type: String },
     state: { type: String },
     country: { type: String },
-    website: { type: String }, // Optional website
-    licenseNumber: { type: String, unique: true }, // Regulatory License Number
+    website: { type: String },
+    licenseNumber: { type: String },
     password: { type: String, required: true },
     passwordChangeAt: { type: Date },
     passwordResetToken: { type: String },

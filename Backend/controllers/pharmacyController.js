@@ -30,7 +30,7 @@ exports.registerPharmacy = async (req, res) => {
       state,
       country,
       password,
-      licenseNumber,
+      // licenseNumber,
       openingHours,
     } = req.body;
 
@@ -52,7 +52,7 @@ exports.registerPharmacy = async (req, res) => {
       state,
       country,
       password,
-      licenseNumber,
+      // licenseNumber,
       openingHours,
     });
 
@@ -173,7 +173,9 @@ exports.toggleClosingStatus = async (req, res) => {
 // @desc post pharmacy Forgot password
 // @route POST /api/pharmacies/forgot-password
 exports.forgotPassword = async (req, res) => {
-  const pharmacy = await pharmacy.findOne({ email: req.body.email.trim().toLowerCase() });
+  const pharmacy = await pharmacy.findOne({
+    email: req.body.email.trim().toLowerCase(),
+  });
   if (!pharmacy) {
     return res.status(404).json({ message: "Pharmacy not found" });
   }
@@ -204,8 +206,7 @@ exports.forgotPassword = async (req, res) => {
       message: "Error sending email. Please try again later.",
     });
   }
-}
-
+};
 
 // @desc patch pharmacy reset password
 // @route PATCH /api/pharmacies/reset-password/:token
@@ -221,17 +222,17 @@ exports.resetPassword = async (req, res) => {
       passwordResetToken: hashedToken,
       passwordResetExpires: { $gt: Date.now() },
     });
-  
+
     if (!pharmacy) {
       return res.status(400).json({ message: "Invalid or expired token" });
     }
-  
+
     pharmacy.password = req.body.password;
     pharmacy.passwordResetToken = undefined;
     pharmacy.passwordResetExpires = undefined;
-  
+
     await pharmacy.save();
-  
+
     res.status(200).json({ message: "Password reset successful" });
     //login pharmacy
     const loginToken = generateToken(pharmacy);
@@ -240,6 +241,6 @@ exports.resetPassword = async (req, res) => {
       token: loginToken,
     });
   } catch (err) {
-    res.status(500).json({message: "Server error", error: err.message });
+    res.status(500).json({ message: "Server error", error: err.message });
   }
-}
+};
