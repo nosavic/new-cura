@@ -34,9 +34,9 @@ exports.registerPharmacy = async (req, res) => {
       openingHours,
     } = req.body;
 
-    if (!openingHours) {
-      return res.status(400).json({ message: "Opening hours are required" });
-    }
+    // if (!openingHours) {
+    //   return res.status(400).json({ message: "Opening hours are required" });
+    // }
 
     const existingPharmacy = await Pharmacy.findOne({ email });
     if (existingPharmacy)
